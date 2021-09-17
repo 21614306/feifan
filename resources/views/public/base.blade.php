@@ -8,7 +8,7 @@
 <body onselectstart="return false">
   <div class="warp">
         <div class="header">
-            <div class="logo" data-aos="fade-right"><a href="/" id="home"><img src="http://feifan.net/images/1597398918717115.jpg" alt="众维咨询" width="615" height="60" /></a></div>
+            <div class="logo" data-aos="fade-right"><a href="/" id="home"><img src="{{$base->url}}images/1597398918717115.jpg" alt="众维咨询" width="615" height="60" /></a></div>
             <div class="meta" data-aos="fade-left">
                 <div class="cd-headline letters scale">
                     <u></u>
@@ -40,7 +40,7 @@
            @yield('nav')
         </div>
     </div>
-    <script src="http://feifan.net/javascript/font-animate-min.js" type="text/javascript"></script>
+    <script src="{{$base->url}}javascript/font-animate-min.js" type="text/javascript"></script>
     <div style="width:100%;">
         @yield('swiper')
     </div>
@@ -78,8 +78,8 @@
                 <div class="koot_copy" style="top:380px">本网站一切文字及图文版权归众维咨询所有， 禁止模仿或无授权使用，违者必究<br>Copyright © 2015-2025 All Rights Reserved. <a href="http://beian.miit.gov.cn/" target="_blank"></a></div>
                 <div class="koot_wx" style="top:300px">
                     <ul>
-                        <li><span><img src="{{'http://feifan.net/uploads/'.$base->qrcode}}" /></span><label>微信公众号</label></li>
-                        <li><span><img src="{{'http://feifan.net/uploads/'.$base->qrcode}}"  /></span><label>扫码咨询</label></li>
+                        <li><span><img src="{{$base->url.'uploads/'.$base->qrcode}}" /></span><label>微信公众号</label></li>
+                        <li><span><img src="{{$base->url.'uploads/'.$base->qrcode}}"  /></span><label>扫码咨询</label></li>
                     </ul>
                 </div>
             </div>
@@ -89,7 +89,7 @@
         <div class="warp">
             <div class="links_powers">
                 <div class="links"><strong>友情链接：</strong>
-                    <a href="http://feifan.net/admin" target="_blank">登录后台</a>&nbsp;&nbsp;
+                    <a href="{{$base->url}}admin" target="_blank">登录后台</a>&nbsp;&nbsp;
                 </div>
             </div>
         </div>
@@ -111,13 +111,13 @@
             </li>
           <!--   <li style="position:relative;">
                 <div class="sidebox side2"></div>
-                <div class="kf_tel" style="background-image: url({{'http://feifan.net/uploads/'.$base->qrcode}});">
+                <div class="kf_tel" style="background-image: url({{$base->url.'uploads/'.$base->qrcode}});">
                     <div class="kf_close_2"></div>
                 </div>
             </li> -->
             <li style="position:relative;">
                 <div class="sidebox side3"></div>
-                <div class="kf_ewm" style="background-image: url({{'http://feifan.net/uploads/'.$base->qrcode}});">
+                <div class="kf_ewm" style="background-image: url({{$base->url.'uploads/'.$base->qrcode}});">
                     <div class="kf_close_3"></div>
                 </div>
             </li>
@@ -126,8 +126,8 @@
             </li>
         </ul>
     </div>
-    <script type="text/javascript" src="http://feifan.net/javascript/kefu.js"></script>
-    <script type="text/javascript" src="http://feifan.net/javascript/aos.js"></script>
+    <script type="text/javascript" src="{{$base->url}}javascript/kefu.js"></script>
+    <script type="text/javascript" src="{{$base->url}}javascript/aos.js"></script>
     <script type="text/javascript">
     AOS.init({
 
@@ -137,7 +137,7 @@
 
     });
     </script>
-    <script language="javascript" src="http://feifan.net/javascript/lsjs.js"></script>
+    <script language="javascript" src="{{$base->url}}javascript/lsjs.js"></script>
     <script>
     (function() {
         var bp = document.createElement('script');
