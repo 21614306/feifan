@@ -434,7 +434,7 @@
                                 <div class="cases_new_desc">
                                     {{
 
-                                        substr($case->content,1,80
+                                        substr($case->desc,1,80
                                         ).'...'}}
                                 </div>
                                 @endif
@@ -459,7 +459,7 @@
                                 <div class="cases_new_desc">
                                     {{
 
-                                        substr($new->content,1,40
+                                        substr($new->desc,1,40
                                         ).'...'}}
                                 </div>
                                 @endif
