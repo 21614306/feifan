@@ -247,7 +247,7 @@
             <!--<div class="swiper-button-prev"></div>-->
 </div>
         <!-- Swiper JS -->
-        <script src="javascript/swiper.min.js"></script>
+        <script src="{{$base->url}}javascript/swiper.min.js"></script>
         <!-- Initialize Swiper -->
         <script>
         var swiper = new Swiper('.swiper-container', {
@@ -283,7 +283,7 @@
                                 <div class="cases_list_title"><a href="{{$base->url.'articleDetail?id='.$article->id}}" target="_blank">{{$article->title}}</a></div>
                                 <div class="cases_list_desc">  {{
 
-                                        substr($article->content,1,300
+                                        substr($article->desc,1,300
                                         ).'...'}}
                                 </div>
                                 <div class="cases_list_tag">发布时间：{{$article->created_at}}
@@ -310,41 +310,8 @@
                         @endif
                         </div>
                     </div>
-                    <div class="blank_30"></div>
-                    <div class="bang_box">
-                        <div class="bang_T"><span>众维推荐 <em>RECOMMENDATIONS</em></span><label><a href="/?news_8/">MORE
-                                    +</a></label></div>
-                        <div class="bang_li">
-                            <div class="bang_li_left">
-                                <div class="bang_li_T">行业新闻</div>
-                                <div class="bang_li_ol">
-                                    <ul>
-                                        <li><a href="/?news_8/666.html" title="Target验厂新方案强调只接受8家审计项目的报告，并明确指定审核公司" target="_blank">Target验厂新方案强调只接受8家审计项目的报告，并明确指定审核公司</a></li>
-                                        <li><a href="/?news_8/23.html" title="Target(塔吉特)宣布将于2020年5月1日起正式接受第三方审核报告！" target="_blank">Target(塔吉特)宣布将于2020年5月1日起正式接受第三方审核报告！</a></li>
-                                        <li><a href="/?news_8/668.html" title="Higg Index FEM验证必然遇到的6个问题，众维为您解答" target="_blank">Higg Index FEM验证必然遇到的6个问题，众维为您解答</a></li>
-                                        <li><a href="/?news_8/667.html" title="行业动态|沃尔玛要求供应商在2022年前完成Higg FEM自我评估和验证！" target="_blank">行业动态|沃尔玛要求供应商在2022年前完成Higg FEM自我评估和验证！</a></li>
-                                        <li><a href="/?news_8/664.html" title="客户常常要求工厂申请的Higg Index验厂到底是什么？怎么样去申请？流程操作" target="_blank">客户常常要求工厂申请的Higg Index验厂到底是什么？怎么样去申请？流程操作</a></li>
-                                        <li><a href="/?news_8/619.html" title="对于火起来的GRS全球回收标准认证，你了解多少？" target="_blank">对于火起来的GRS全球回收标准认证，你了解多少？</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="bang_li_right">
-                                <div class="bang_li_T" style="background:url(http://feifan.net/images/ico_2.png) left center no-repeat;">最新案例</div>
-                                <div class="bang_li_ol">
-                                    <ul>
-                                        <li><a href="/?list_3/371.html" title="恭贺福建柒牌集团有限公司2020年8月顺利通过CE认证" target="_blank">恭贺福建柒牌集团有限公司2020年8月顺利通过CE认证</a></li>
-                                        <li><a href="/?list_3/369.html" title="恭贺福建劲霸男装股份有限公司2019年12月顺利通过Disney验厂" target="_blank">恭贺福建劲霸男装股份有限公司2019年12月顺利通过Disney验厂</a></li>
-                                        <li><a href="/?list_3/374.html" title="恭贺三六一度（中国）有限公司2020年6月顺利通过NBCU授权审核" target="_blank">恭贺三六一度（中国）有限公司2020年6月顺利通过NBCU授权审核</a></li>
-                                        <li><a href="/?list_3/373.html" title="恭贺匹克（江西）实业有限公司司2020年5月份顺利通过BSCI认证" target="_blank">恭贺匹克（江西）实业有限公司司2020年5月份顺利通过BSCI认证</a></li>
-                                        <li><a href="/?list_3/372.html" title="恭贺江西省中德服饰有限公司2020年7月份顺利通过BSCI认证" target="_blank">恭贺江西省中德服饰有限公司2020年7月份顺利通过BSCI认证</a></li>
-                                        <li><a href="/?list_3/370.html" title="恭贺XXX（福建）纺织科技有限公司2020年7月份顺利通过Higg审核" target="_blank">恭贺XXX（福建）纺织科技有限公司2020年7月份顺利通过Higg审核</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cases_right">
+
+                               <div class="cases_right">
                     <div class="ca_info">
                         <ul>
                             <li><a href="/?list_1/" target="_blank">服务项目</a></li>
@@ -354,21 +321,13 @@
                         </ul>
                     </div>
                     <div class="xc_cases">
-                        <div class="xc_cases_T"><span>新闻动态</span><label><a href="/?news_8/">更多+</a></label></div>
+                        <div class="xc_cases_T"><span>新闻动态</span><label></label></div>
                         <div class="xc_cases_li" id="xc_cases_li">
                             <ul>
-                                <li><a href="/?news_8/666.html" title="Target验厂新方案强调只接受8家审计项目的报告，并明确指定审核公司" target="_blank">Target验厂新方案强调只接受8家审计项目的报告，并明确指定审核公司...</a></li>
-                                <li><a href="/?news_8/23.html" title="Target(塔吉特)宣布将于2020年5月1日起正式接受第三方审核报告！" target="_blank">Target(塔吉特)宣布将于2020年5月1日起正式接受第三方审核报告！...</a></li>
-                                <li><a href="/?news_8/668.html" title="Higg Index FEM验证必然遇到的6个问题，众维为您解答" target="_blank">Higg Index FEM验证必然遇到的6个问题，众维为您解答...</a></li>
-                                <li><a href="/?news_8/667.html" title="行业动态|沃尔玛要求供应商在2022年前完成Higg FEM自我评估和验证！" target="_blank">行业动态|沃尔玛要求供应商在2022年前完成Higg FEM自我评估和验证！...</a></li>
-                                <li><a href="/?news_8/664.html" title="客户常常要求工厂申请的Higg Index验厂到底是什么？怎么样去申请？流程操作" target="_blank">客户常常要求工厂申请的Higg Index验厂到底是什么？怎么样去申请？流程操作...</a></li>
-                                <li><a href="/?news_8/619.html" title="对于火起来的GRS全球回收标准认证，你了解多少？" target="_blank">对于火起来的GRS全球回收标准认证，你了解多少？...</a></li>
-                                <li><a href="/?news_8/77.html" title="CSR行业新热点：HIGG/ FEM /SLCP" target="_blank">CSR行业新热点：HIGG/ FEM /SLCP...</a></li>
-                                <li><a href="/?news_8/92.html" title="大型验厂审核机构介绍" target="_blank">大型验厂审核机构介绍...</a></li>
-                                <li><a href="/?news_8/631.html" title="家乐福要求供应商必须通过GRS验厂认证！" target="_blank">家乐福要求供应商必须通过GRS验厂认证！...</a></li>
-                                <li><a href="/?news_8/633.html" title="突击验厂（不定时验厂）的应对工作" target="_blank">突击验厂（不定时验厂）的应对工作...</a></li>
-                                <li><a href="/?news_8/673.html" title="申延3个月的amfori BSCI验厂报告已经无效，赶紧重新申请审核，避免错失订单" target="_blank">申延3个月的amfori BSCI验厂报告已经无效，赶紧重新申请审核，避免错失订单...</a></li>
-                                <li><a href="/?news_8/665.html" title="验厂必须伴随着各种审核，如何理解这些审核的区别呢？" target="_blank">验厂必须伴随着各种审核，如何理解这些审核的区别呢？...</a></li>
+                                        @foreach($industry_news as $news)
+
+                                <li><a href="{{$base->url.'articleDetail?id='.$news->id}}" title="{{$news->title}}" target="_blank">{{$news->title}}</a></li>
+                                        @endforeach
                             </ul>
                         </div>
                         <script>
@@ -401,6 +360,38 @@
                         <div class="xc_wwx"><img src="{{$base->url}}images/1597157783644221.gif" /></div>
                     </div>
                 </div>
+
+                
+                    <div class="bang_box">
+                        <div class="bang_T"><span>众维推荐 <em>RECOMMENDATIONS</em></span><label><a href="/?news_8/">MORE
+                                    +</a></label></div>
+                        <div class="bang_li">
+                            <div class="bang_li_left">
+                                <div class="bang_li_T">行业新闻</div>
+                                <div class="bang_li_ol">
+                                    <ul>
+                                        @foreach($industry_news as $news)
+                                        <li><a href="{{$base->url.'articleDetail?id='.$news->id}}" title="{{$news->title}}" target="_blank">{{$news->title}}</a></li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="bang_li_right">
+                                <div class="bang_li_T" style="background:url(http://feifan.net/images/ico_2.png) left center no-repeat;">最新案例</div>
+                                <div class="bang_li_ol">
+                                    <ul>
+                                        @foreach($cases as $cases)
+
+                                        <li><a href="{{$base->url.'articleDetail?id='.$cases->id}}" title="{{$cases->title}}" target="_blank">{{$cases->title}}</a></li>
+                                        @endforeach
+                                       
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+     
             </div>
         </div>
     </div>

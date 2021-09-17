@@ -423,7 +423,7 @@
                                 <li>公司动态</li>
                             </ul>
                         </div>
-                        <div class="casenew_T_r"><a href="http://zixun.net/success" target="_blank">了解更多</a></div>
+                        <div class="casenew_T_r"><a href="{{$base->url.'success/'}}" target="_blank">了解更多</a></div>
                     </div>
                     <div class="cases_win">
                         <div>

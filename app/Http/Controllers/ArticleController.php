@@ -155,7 +155,9 @@ class ArticleController extends Controller
     	
     	$base = Basis::find(1);
     	$companys = Company::all();
-        $articles = Article::where('type','case_news')->paginate(10);
+        $articles = Article::where('type','case_news')->paginate(5);
+        $industry_news = Article::where('type','industry_news')->paginate(5);
+        $cases = Article::where('type','case_news')->paginate(5);
         $auths = Authentication::all();
         $args = [
             'lastPage'=>$articles->lastPage(),
@@ -166,7 +168,9 @@ class ArticleController extends Controller
             'case'=>$articles,
             'args' =>$args,
     		'base' => $base,
-    		'companys'=>$companys,
+    		'industry_news'=>$industry_news,
+            'cases'=>$cases,
+            'companys'=>$companys,
             'auths'=>$auths
     	]);
     }
