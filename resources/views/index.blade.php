@@ -378,8 +378,8 @@
                             @foreach($cases as $case)
                             @if($loop->index <4)
                             <div class="fcon" style="display: none;">
-                                <a href="{{$base->url.'articleDetail/'.$case->id }}" title="{{$case->title}}" target="_blank"><img src="{{$case->content}}" /></a>
-                                <span class="shadow"><a href="/articleDetail/article_1364.html" title="{{$case->title}}" target="_blank">{{$case->title}}</a></span> 
+                                <a href="{{$base->url.'articleDetail?id='.$case->id }}" title="{{$case->title}}" target="_blank"><img src="{{$base->url.'uploads/'.$case->cover}}" /></a>
+                                <span class="shadow"><a href="{{$base->url.'articleDetail?id='.$case->id }}" title="{{$case->title}}" target="_blank">{{$case->title}}</a></span> 
                             </div>
                             @endif
                            @endforeach
