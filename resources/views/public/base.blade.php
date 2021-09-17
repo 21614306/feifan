@@ -79,7 +79,7 @@
                 <div class="koot_wx" style="top:300px">
                     <ul>
                         <li><span><img src="{{$base->url.'uploads/'.$base->qrcode}}" /></span><label>微信公众号</label></li>
-                        <li><span><img src="{{$base->url.'uploads/'.$base->qrcode}}"  /></span><label>扫码咨询</label></li>
+                        <li><span><img src="{{$base->url.'uploads/'.$base->ewm}}"  /></span><label>扫码咨询</label></li>
                     </ul>
                 </div>
             </div>

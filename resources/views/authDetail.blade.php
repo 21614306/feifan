@@ -278,7 +278,7 @@
                         	 @foreach($articles as $article)
                             <li>
                                 <div class="item_list_title"><a href="{{$base->url.'articleDetail?id='.$article->id}}" target="_blank">{{$article->title}}</a></div>
-                                <div class="item_list_desc">{{$article->content}}</div>
+                                <div class="item_list_desc">{{$article->desc}}</div>
                                 <div class="item_list_more"><a href="{{$base->url.'articleDetail?id='.$article->id}}" target="_blank">阅读全文+</a></div>
                                 <div class="item_list_look">阅读：{{$article->readNum}}</div>
                             </li>

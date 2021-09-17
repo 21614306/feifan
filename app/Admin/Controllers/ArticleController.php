@@ -20,6 +20,7 @@ class ArticleController extends AdminController
     protected function grid()
     {
         return Grid::make(new Article(), function (Grid $grid) {
+            dd($grid);
             $grid->column('id')->sortable();
             $grid->column('type');
             $grid->column('title');
@@ -78,7 +79,12 @@ class ArticleController extends AdminController
             }
             $form->display('id');
             $form->text('title')->required();
-            $form->radio('type')->options($options)->required();
+            $form->radio('type')->options([
+                'case_news'=>'案例动态',
+                'company_news'=>'公司动态',
+                'industry_news'=>'行业动态',
+                'grs_news'=>'grs动态'
+            ])->required();
             $form->text('desc')->required();
             $form->markdown('content')->imageDirectory('upload/image');
             $form->text('author')->required();

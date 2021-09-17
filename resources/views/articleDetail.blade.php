@@ -68,9 +68,6 @@
                             </span></div>
                         <div class="bk_article_content">
                             @markdown{{$article->content}}@endmarkdown
-
-                            
-                          
                         </div>
                         <div class="bk_article_PN">
                             @if($article_pre)

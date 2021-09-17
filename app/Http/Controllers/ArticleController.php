@@ -19,8 +19,8 @@ class ArticleController extends Controller
     public function index()
     {
     	$auths = Authentication::all();
-    	$cases = Article::all()->where('type','案例动态');
-    	$news = Article::all()->where('type','公司动态');
+    	$cases = Article::all()->where('type','case_news');
+    	$news = Article::all()->where('type','company_news');
     	$base = Basis::find(1);
     	$companys = Company::all();
 
@@ -75,7 +75,7 @@ class ArticleController extends Controller
         $article = Article::find($id);
         $article_next =Article::find($id+1);
         $article_pre =Article::find($id-1); 
-        $articles = Article::all()->where('type','案例动态');
+        $articles = Article::all()->where('type','case_news');
         $base = Basis::find(1);
         $companys = Company::all();
        $b =  Markdown::convertToHtml($article->content); 
@@ -155,7 +155,7 @@ class ArticleController extends Controller
     	
     	$base = Basis::find(1);
     	$companys = Company::all();
-        $articles = Article::where('type','公司动态')->paginate(10);
+        $articles = Article::where('type','case_news')->paginate(10);
         $auths = Authentication::all();
         $args = [
             'lastPage'=>$articles->lastPage(),
@@ -163,6 +163,7 @@ class ArticleController extends Controller
         ];
     	return view('success',[
             'articles'=>$articles,
+            'case'=>$articles,
             'args' =>$args,
     		'base' => $base,
     		'companys'=>$companys,
@@ -186,8 +187,8 @@ class ArticleController extends Controller
     public function liucheng()
     {
         $auths = Authentication::all();
-        $cases = Article::all()->where('type','案例动态');
-        $news = Article::all()->where('type','公司动态');
+        $cases = Article::all()->where('type','case_news');
+        $news = Article::all()->where('type','company_news');
         $base = Basis::find(1);
         $companys = Company::all();
 
