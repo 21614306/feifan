@@ -20,7 +20,6 @@ class ArticleController extends AdminController
     protected function grid()
     {
         return Grid::make(new Article(), function (Grid $grid) {
-            dd($grid);
             $grid->column('id')->sortable();
             $grid->column('type');
             $grid->column('title');
