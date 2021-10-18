@@ -31,14 +31,13 @@
 
     <div class=" am-topbar-left am-form-inline am-topbar-right" role="search">
       <ul class="am-nav am-nav-pills am-topbar-nav hw-menu">
-      <li class="hw-menu-active"><a href="/">首页</a></li>
-      <li ><a href="solutions.html">解决方案</a></li>
-      <li><a href="product-show.html">产品展示 </a></li>
-      <li><a href="customer-case.html">客户案例</a></li>
-      <li><a href="service-center.html">服务中心 </a></li>
-      <li><a href="news.html">新闻动态 </a></li>
-      <li><a href="{{$base->url}}abouts">关于我们</a></li>
-      <li><a href="recruit.html">招贤纳士 </a></li>
+      <li><a href="/">首页</a></li>
+      <li><a href="{{$base->url}}solutions">解决方案</a></li>
+      <li><a href="{{$base->url}}product-show">产品展示 </a></li>
+      <li><a href="{{$base->url}}customer-case">客户案例</a></li>
+      <li><a href="{{$base->url}}service-center">服务中心 </a></li>
+      <li><a href="{{$base->url}}news">新闻动态 </a></li>
+      <li class="hw-menu-active"><a href="{{$base->url}}about-us">关于我们</a></li>
     </ul>
     </div>
 
@@ -69,17 +68,17 @@
         <ul class="am-g part-content solutions-content">
           <li class="am-u-sm-6 am-u-md-3 am-u-lg-3">
             <i class="am-icon-safari solution-circle"></i>
-            <span class="solutions-title">网站、移动网站</span>
+            <span class="solutions-title">客户验厂</span>
             <p class="solutions-way">微信公众号开发移动网站微信公众号开发</p>
           </li>
           <li class="am-u-sm-6 am-u-md-3 am-u-lg-3">
             <i class="am-icon-magic solution-circle"></i>
-            <span class="solutions-title">网站、移动网站</span>
+            <span class="solutions-title">体系验厂</span>
             <p class="solutions-way">移动网站微信公众号开发移动网站微信公众号开发,解决方案</p>
           </li>
           <li class="am-u-sm-6 am-u-md-3 am-u-lg-3">
             <i class="am-icon-phone solution-circle"></i>
-            <span class="solutions-title">网站、移动网站</span>
+            <span class="solutions-title">grs认证</span>
             <p class="solutions-way">移动网站微信公众号开发移动网站微信公众号开发</p>
           </li>
           <li class="am-u-sm-6 am-u-md-3 am-u-lg-3">
@@ -226,12 +225,11 @@
             <div class="part-5-title">相关链接</div>
             <div class="part-5-words2">
                 <ul class="part-5-words2-ul">
-                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="solutions.html">解决方案</a></li>
-                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="product-show.html">产品展示</a></li>
-                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="customer-case.html">客户案例</a></li>
-                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="service-center.html">服务中心</a></li>
-                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="about-us.html">关于我们</a></li>
-                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="recruit.html">招贤纳士</a></li>
+                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}solutions">解决方案</a></li>
+                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}product-show">产品展示</a></li>
+                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}customer-case">客户案例</a></li>
+                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}service-center">服务中心</a></li>
+                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}about-us">关于我们</a></li>
                     <div class="clear"></div>
                 </ul>
             </div>
@@ -245,10 +243,7 @@
 <style>
 .copyrights{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
 </style>
-<div class="copyrights" id="links20210126">
-    Collect from <a href="http://www.cssmoban.com/"  title="网站模板">模板之家</a>
-    <a href="https://www.chazidian.com/"  title="查字典">查字典</a>
-</div>
+
 </body>
 <!--[if lt IE 9]>
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>

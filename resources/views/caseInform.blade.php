@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
   <meta charset="UTF-8">
-  <title>新闻详情</title>
+  <title>案例详情</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport"
         content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0,user-scalable=no">
@@ -43,68 +43,57 @@
   </div>
   </div>
 </header>
+
 <div class="toppic">
-     <div class="am-container-1">
-     <div class="toppic-title left">
-            <i class="am-icon-newspaper-o toppic-title-i"></i>
-            <span class="toppic-title-span">新闻详情</span>
-            <p>News Information</p>
-        </div>
-        <div class="right toppic-progress">
-            <span><a href="news.html" class="w-white">新闻动态</a></span>
-            <i class=" am-icon-arrow-circle-right w-white"></i>
-            <span><a href="news-inform.html" class="w-white">新闻详情</a></span>
-        </div>
-    </div>
+	 <div class="am-container-1">
+	 <div class="toppic-title left">
+			<i class="am-icon-paper-plane toppic-title-i"></i>
+			<span class="toppic-title-span">案例详情</span>
+			<p>Case Information</p>
+		</div>
+		<div class="right toppic-progress">
+			<span><a href="customer-case.html" class="w-white">客户案例</a></span>
+			<i class=" am-icon-arrow-circle-right w-white"></i>
+			<span><a href="case-inform.html" class="w-white">案例详情</a></span>
+		</div>
+	</div>
 </div>
 
-<div class="am-container-1 margin-t30">
-    <div class="words-title ">
-        <span>关于召开2020全国互联网工作年会的通知</span>
-        <div>2020-12-29</div>
-    </div>
+
+
+<div >
+	<div class=" product-show-ul">
+	   
+	    	<div class="product-content">
+			    	<div class="left am-u-sm-12 am-u-md-6 am-u-lg-6 product-content-left case-left">
+			    		<div class="product-show-title">
+			    			<h3>物流红娘APP</h3>
+			    		</div>
+			    	
+			    	<div class="product-show-content">			    		
+			    		<div class="product-intro case-inform">
+			    			<span>详情介绍：</span>
+			    			<div><p>一款响应式商城模板，是专门针对中小物流企业的实际业务需求量身定做的物流管理系统，具有界面简洁、流程灵活、操作方便、易于实施的特点。 该产品基于领先的云计算技术，用户无需在本地安装软件、无需购买专门的服务器硬件、无需专业的IT人员进行维护， 只要打开浏览器，登录网站，即可使用在线物流软件。
+			    			技术，用户无需在本地安装软件、无需购买专门的服务器硬件、无需专业的IT人员进行维护， 只要打开浏览器，登录网站，即可是专门针对中小物流企业的实际业务需求量身定做的物流管理系统，具有界面简洁、</p></div>
+			    		  <i class="am-icon-tasks"></i>
+			    		  <img src="{{$base->url}}img/erweima.png" />
+			    		</div>
+			    	</div>
+			    	</div>
+			    	<div class="right am-u-sm-12 am-u-md-6 am-u-lg-6 product-content-right">
+			    		<img class="case-img" src="{{$base->url}}img/case1.png" />
+			    	</div>	
+			    	<div class="clear"></div>
+	    	</div>
+	
+
+	</div>
 </div>
-        
-<div class="solution-inform">
-    <div class=" solution-inform-content-all">
-        <div class="solution-inform-content">
-            <p class="inform-content-p">华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，</p>
-          <div class="solution-inform-content-img">
-            <img src="{{$base->url}}img/inform.png"/>
-            <div class="clear"></div>
-          </div>
-          <p class="solution-inform-content-words">(一) 业务管理预受理单据
-1) 预受理单据用于需要上门取货的客户及货物信息的录入。预受理单据可以由发货客户远程录入，也可以由业务员录入。录入的预受理单据信息主要包括以下内容：
-2) 发货人信息；收货人信息；终点站、到站、付款方式是否保险（保价费）及
-3) 货物信息：货物名称、货物包装、件数、运费。
-4) 预受理单支持多种条件组合查询。
-    </p>
-    
-    <p class="solution-inform-content-words">
-醒信息后，可以点击进入进行预受理派车操作（录入车号、默认司机信息（姓名、电话），提交派车）。
-2) 也可以通过查询客户名称、可以通过日期实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，</br>
-    </p>
-    
-     <p class="solution-inform-content-words">(一) 业务管理预受理单据
-1) 预受理单据用于需要上门取货的客户及货物信息的录入。预受理单据可以由发货客户远程录入，也可以由业务员录入。录入的预受理单据信息主要包括以下内容：
-2) 发货人信息；收货人信息；终点站、到站、付款方式是否保险（保价费）及
-3) 货物信息：货物名称、货物包装、件数、运费。
-4) 预受理单支持多种条件组合查询。
-    </p>
-    
-    <p class="solution-inform-content-words">
-醒信息后，可以点击进入进行预受理派车操作（录入车号、默认司机信息（姓名、电话），提交派车）。
-2) 也可以通过查询客户名称、可以通过日期实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，</br>
-    </p>
-     
-  
-  
-        </div>
-    </div>
-</div>
+
   
    
-        
+		
+</div>
 
 <footer class="footer ">
     
@@ -137,6 +126,7 @@
     </ul>
    
 </footer>
+
 
 </body>
 <!--[if lt IE 9]>

@@ -15,9 +15,18 @@ use  App\Http\Controllers\ArticleController;
 |
 */
 
-Route::get('/', [ArticleController::class, 'index'] );
+Route::get('/123', [ArticleController::class, 'index'] );
 
-Route::get('/yanchang', [ArticleController::class, 'yanchang'] );
+Route::get('/', [ArticleController::class, 'solutions'] );
+Route::get('/product-show', [ArticleController::class, 'productShow'] );
+Route::get('/customer-case', [ArticleController::class, 'customerCase'] );
+Route::get('/service-center', [ArticleController::class, 'serviceCenter'] );
+Route::get('/news', [ArticleController::class, 'news'] );
+Route::get('/about-us', [ArticleController::class, 'about'] );
+
+
+
+
 Route::get('/authDetail', [ArticleController::class, 'authDetail'] );
 Route::post('/authSearch', [ArticleController::class, 'authSearch'] );
 Route::get('/articleDetail', [ArticleController::class, 'articleDetail'] );

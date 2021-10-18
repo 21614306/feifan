@@ -32,12 +32,11 @@
       <ul class="am-nav am-nav-pills am-topbar-nav hw-menu">
       <li><a href="/">首页</a></li>
       <li><a href="{{$base->url}}solutions">解决方案</a></li>
-      <li><a href="product-show.html">产品展示 </a></li>
-      <li><a href="customer-case.html">客户案例</a></li>
-      <li><a href="service-center.html">服务中心 </a></li>
-      <li><a href="news.html">新闻动态 </a></li>
-      <li class="hw-menu-active"><a href="about-us.html">关于我们</a></li>
-      <li><a href="recruit.html">招贤纳士 </a></li>
+      <li><a href="{{$base->url}}product-show">产品展示 </a></li>
+      <li><a href="{{$base->url}}customer-case">客户案例</a></li>
+      <li><a href="{{$base->url}}service-center">服务中心 </a></li>
+      <li><a href="{{$base->url}}news">新闻动态 </a></li>
+      <li class="hw-menu-active"><a href="{{$base->url}}about-us">关于我们</a></li>
     </ul>
     </div>
 
@@ -114,7 +113,7 @@
 
 <div class=" am-container-1">
     <div class="part-title part-title-mar">
-            <a href="customer-case.html">
+            <a href="{{$base->url}}customer-case">
             <i class=" am-icon-home part-title-i"></i>
             <span class="part-title-span">办公环境</span>
             <p>Office Space</p>
@@ -143,7 +142,7 @@
 </div>
 <div class=" am-container-1">
     <div class="part-title part-title-mar">
-            <a href="customer-case.html">
+            <a href="{{$base->url}}customer-case">
             <i class=" am-icon-comments-o part-title-i"></i>
             <span class="part-title-span">联系我们</span>
             <p>Contact Us</p>
@@ -194,12 +193,11 @@
             <div class="part-5-title">相关链接</div>
             <div class="part-5-words2">
                 <ul class="part-5-words2-ul">
-                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="solutions.html">解决方案</a></li>
-                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="product-show.html">产品展示</a></li>
-                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="customer-case.html">客户案例</a></li>
-                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="service-center.html">服务中心</a></li>
-                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="about-us.html">关于我们</a></li>
-                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="recruit.html">招贤纳士</a></li>
+                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}solutions">解决方案</a></li>
+                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}product-show">产品展示</a></li>
+                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}customer-case">客户案例</a></li>
+                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}service-center">服务中心</a></li>
+                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}about-us">关于我们</a></li>
                     <div class="clear"></div>
                 </ul>
             </div>
