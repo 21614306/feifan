@@ -19,8 +19,8 @@
 <header class="am-topbar header">
     <div class="am-container-1">
         <div class="left hw-logo">
-          <img class=" logo" src="{{$base->url}}img/HENGWANG.png"></img>
-          <img class="word" src="{{$base->url}}img/hw-word.png"></img>
+          <img class=" logo" src="{{$base->url.'uploads/'.$base->logo}}"></img>
+          <!-- <img class="word" src="{{$base->url}}img/hw-word.png"></img> -->
     </div>
   <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
           data-am-collapse="{target: '#doc-topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span
@@ -31,13 +31,12 @@
 
     <div class=" am-topbar-left am-form-inline am-topbar-right" role="search">
       <ul class="am-nav am-nav-pills am-topbar-nav hw-menu">
-      <li><a href="/">首页</a></li>
-      <li><a href="{{$base->url}}solutions">解决方案</a></li>
-      <li><a href="{{$base->url}}product-show">产品展示 </a></li>
+      <li class="hw-menu-active"><a href="/">首页</a></li>
+      <li><a href="{{$base->url}}solutions">验厂服务</a></li>
+      <li><a href="{{$base->url}}product-show">GRS认证</a></li>
       <li><a href="{{$base->url}}customer-case">客户案例</a></li>
-      <li><a href="{{$base->url}}service-center">服务中心 </a></li>
       <li><a href="{{$base->url}}news">新闻动态 </a></li>
-      <li class="hw-menu-active"><a href="{{$base->url}}about-us">关于我们</a></li>
+      <li ><a href="{{$base->url}}about-us">关于我们</a></li>
     </ul>
     </div>
 
@@ -59,9 +58,9 @@
 <div class="am-container-1">
     <div class="solutions part-all">
         <div class="part-title">
-            <a href="solutions.html">
+            <a href="{{$base->url}}solutions">
             <i class="am-icon-lightbulb-o part-title-i"></i>
-            <span class="part-title-span">解决方案</span>
+            <span class="part-title-span">验厂服务</span>
             <p>Solutions</p>
             </a>
         </div>
@@ -78,7 +77,7 @@
           </li>
           <li class="am-u-sm-6 am-u-md-3 am-u-lg-3">
             <i class="am-icon-phone solution-circle"></i>
-            <span class="solutions-title">grs认证</span>
+            <span class="solutions-title">GRS认证</span>
             <p class="solutions-way">移动网站微信公众号开发移动网站微信公众号开发</p>
           </li>
           <li class="am-u-sm-6 am-u-md-3 am-u-lg-3">
@@ -94,7 +93,7 @@
     <div class="gray-li">
     <div class="customer-case part-all ">
         <div class="part-title">
-            <a href="customer-case.html">
+            <a href="{{$base->url}}customer-case">
             <i class=" am-icon-briefcase part-title-i"></i>
             <span class="part-title-span">客户案例</span>
             <p>Customer Case</p>
@@ -128,7 +127,7 @@
                 <p>A full range of solutions for you to solve different problems</p>
             </div>
             <div class="right">
-                <a href="customer-case.html">
+                <a href="{{$base->url}}customer-case">
                     <span class="see-more">查看更多<i class="am-icon-angle-double-right"></i></span>
                 </a>
             </div>
@@ -144,7 +143,7 @@
     <div class="am-container-1">
 <div class="news part-all">
         <div class="part-title">
-            <a href="news.html">
+            <a href="{{$base->url}}news">
             <i class="am-icon-newspaper-o part-title-i"></i>
             <span class="part-title-span">新闻动态</span>
             <p>Hengwang News</p>
@@ -158,7 +157,7 @@
                         <a href="#">
                             <div class=" am-u-sm-12 am-u-md-12 am-u-lg-5">
                                 <div class="news-img">
-                                <img src="{{$base->url}}img/news.png"></img>
+                                <img src="{{$base->url.'uploads/'.$new->cover}}"></img>
                                 </div>
                             </div>
                             <div  class=" am-u-sm-12 am-u-md-12 am-u-lg-7">
@@ -225,10 +224,9 @@
             <div class="part-5-title">相关链接</div>
             <div class="part-5-words2">
                 <ul class="part-5-words2-ul">
-                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}solutions">解决方案</a></li>
+                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}solutions">验厂服务</a></li>
                     <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}product-show">产品展示</a></li>
                     <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}customer-case">客户案例</a></li>
-                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}service-center">服务中心</a></li>
                     <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}about-us">关于我们</a></li>
                     <div class="clear"></div>
                 </ul>

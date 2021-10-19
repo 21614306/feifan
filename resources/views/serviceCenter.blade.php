@@ -11,15 +11,15 @@
   <meta http-equiv="Cache-Control" content="no-siteapp"/>
   
   <link rel="alternate icon" type="{{$base->url}}img/hengwang-1.png" href="{{$base->url}}img/hengwang-1.png">
-  <link rel="stylesheet" href="{{$base->url}}css/amazeui.css"/>
-  <link rel="stylesheet" href="{{$base->url}}css/style.css"/>
+  <link rel="stylesheet" href="css/amazeui.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 <header class="am-topbar header">
-    <div class="am-container-1">
-        <div class="left hw-logo">
-          <img class=" logo" src="{{$base->url.'uploads/'.$base->logo}}"></img>
-          <!-- <img class="word" src="{{$base->url}}img/hw-word.png"></img> -->
+	<div class="am-container-1">
+		<div class="left hw-logo">
+		  <img class=" logo" src="{{$base->url.'uploads/'.$base->logo}}"></img>
+		  <!-- <img class="word" src="{{$base->url}}img/hw-word.png"></img> -->
     </div>
   <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
           data-am-collapse="{target: '#doc-topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span
@@ -30,20 +30,19 @@
 
     <div class=" am-topbar-left am-form-inline am-topbar-right" role="search">
       <ul class="am-nav am-nav-pills am-topbar-nav hw-menu">
-      <li><a href="{{$base->url}}index.html">首页</a></li>
-      <li><a href="{{$base->url}}solutions.html">验厂服务</a></li>
-      <li><a href="{{$base->url}}product-show.html">GRS认证</a></li>
-      <li><a href="{{$base->url}}customer-case.html">客户案例</a></li>
-      <li><a href="{{$base->url}}service-center.html">服务中心 </a></li>
-      <li class="hw-menu-active"><a href="{{$base->url}}news.html">新闻动态 </a></li>
-      <li><a href="{{$base->url}}about-us.html">关于我们</a></li>
+      <li><a href="{{$base->url}}index">首页</a></li>
+      <li><a href="{{$base->url}}solutions">验厂服务</a></li>
+      <li><a href="{{$base->url}}product-show">GRS认证</a></li>
+      <li><a href="{{$base->url}}customer-case">客户案例</a></li>
+      <li class="hw-menu-active"><a href="{{$base->url}}service-center">服务中心 </a></li>
+      <li><a href="{{$base->url}}news">新闻动态 </a></li>
+      <li><a href="{{$base->url}}about-us">关于我们</a></li>
     </ul>
     </div>
 
   </div>
   </div>
 </header>
-
 <div class="toppic">
 	 <div class="am-container-1">
 	 <div class="toppic-title left">
@@ -52,9 +51,9 @@
 			<p>Service Center</p>
 		</div>
 		<div class="right toppic-progress">
-			<span><a href="index.html" class="w-white">首页</a></span>
+			<span><a href="/" class="w-white">首页</a></span>
 			<i class=" am-icon-arrow-circle-right w-white"></i>
-			<span><a href="service-center.html" class="w-white">服务中心</a></span>
+			<span><a href="{{$base->url}}service-center" class="w-white">服务中心</a></span>
 		</div>
 	</div>
 </div>
@@ -141,7 +140,7 @@
 
 
 <footer class="footer ">
-    
+	
 <ul>
         
         <li class="am-u-lg-4 am-u-md-4 am-u-sm-12 part-5-li2">
@@ -163,6 +162,7 @@
                     <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}customer-case">客户案例</a></li>
                     <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}service-center">服务中心</a></li>
                     <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}about-us">关于我们</a></li>
+                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}recruit">招贤纳士</a></li>
                     <div class="clear"></div>
                 </ul>
             </div>
@@ -172,11 +172,12 @@
    
 </footer>
 
+
 </body>
 <!--[if lt IE 9]>
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
-<script src="assets/{{$base->url}}js/amazeui.ie8polyfill.min.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
 <![endif]-->
 <script src="{{$base->url}}js/jquery.min.js"></script>
 <script src="{{$base->url}}js/amazeui.min.js"></script>

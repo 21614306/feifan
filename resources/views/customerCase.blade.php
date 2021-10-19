@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
   <meta charset="UTF-8">
-  <title>产品展示</title>
+  <title>客户案例</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport"
         content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0,user-scalable=no">
@@ -16,10 +16,10 @@
 </head>
 <body>
 <header class="am-topbar header">
-    <div class="am-container-1">
-        <div class="left hw-logo">
-          <img class=" logo" src="{{$base->url.'uploads/'.$base->logo}}"></img>
-          <!-- <img class="word" src="{{$base->url}}img/hw-word.png"></img> -->
+	<div class="am-container-1">
+		<div class="left hw-logo">
+		  <img class=" logo" src="{{$base->url.'uploads/'.$base->logo}}"></img>
+		  <!-- <img class="word" src="{{$base->url}}img/hw-word.png"></img> -->
     </div>
   <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
           data-am-collapse="{target: '#doc-topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span
@@ -32,8 +32,8 @@
       <ul class="am-nav am-nav-pills am-topbar-nav hw-menu">
       <li><a href="/">首页</a></li>
       <li><a href="{{$base->url}}solutions">验厂服务</a></li>
-      <li  class="hw-menu-active"><a href="{{$base->url}}product-show">GRS认证</a></li>
-      <li><a href="{{$base->url}}customer-case">客户案例</a></li>
+      <li><a href="{{$base->url}}product-show">GRS认证</a></li>
+      <li  class="hw-menu-active"><a href="{{$base->url}}customer-case">客户案例</a></li>
       <li><a href="{{$base->url}}news">新闻动态 </a></li>
       <li><a href="{{$base->url}}about-us">关于我们</a></li>
     </ul>
@@ -42,94 +42,67 @@
   </div>
   </div>
 </header>
-
 <div class="toppic">
-	 <div class="am-container-1">
+	<div class="am-container-1">
 	 <div class="toppic-title left">
-			<i class="am-icon-dropbox toppic-title-i"></i>
-			<span class="toppic-title-span">GRS认证</span>
-			<p>Product Show</p>
+			<i class="am-icon-briefcase toppic-title-i"></i>
+			<span class="toppic-title-span">客户案例</span>
+			<p>Customer Case</p>
 		</div>
 		<div class="right toppic-progress">
 			<span><a href="/" class="w-white">首页</a></span>
 			<i class=" am-icon-arrow-circle-right w-white"></i>
-			<span><a href="{{$base->url}}product-show" class="w-white">GRS认证</a></span>
+			<span><a href="{{$base->url}}customer-case" class="w-white">客户案例</a></span>
 		</div>
 	</div>
 </div>
 
-<div >
-	<ul class=" product-show-ul">
-		@foreach ($grsArticles as $article)
-		@if($loop->index%2 ==0)
-	    <li >
-	    	<div class="product-content">
-			    	<div class="left am-u-sm-12 am-u-md-6 am-u-lg-6 product-content-left">
-			    		<div class="product-show-title">
-			    			<h3>{{$article->title}}</h3>
-			    		</div>
-			    	
-			    	<div class="product-show-content">
-			    			<div class="product-add">
-			    			<span>发布时间:</span>
-			    			<div><a href="#">{{$article->created_at}}</a></div>
-			    			<i class="am-icon-dribbble"></i>
-			    		</div>
-			    		<div class="product-intro">
-			    			<span>详情介绍:</span>
-			    			<div><p>{{$article->desc}}</p></div>
-			    		  <i class="am-icon-tasks"></i>
-			    		</div>
-			    	</div>
-			    	</div>
-			    	<div class="right am-u-sm-12 am-u-md-6 am-u-lg-6 product-content-right">
-			    		<img class="product-img" src="{{$base->url.'uploads/'.$article->cover}}" />
-			    	</div>	
-			    	<div class="clear"></div>
-	    	</div>
-	    </li>
-	    @endif
-	    @if($loop->index%2 !=0)
-	    	    <li class="gray-li">
-	    	<div class="product-content">
-			    	<div class="left am-u-sm-12 am-u-md-6 am-u-lg-6 product-content-left">
-			    		<img class="product-img" src="img/product1.png" />
-			    		
-			    	</div>
-			    	<div class="right am-u-sm-12 am-u-md-6 am-u-lg-6 product-content-right">
-			    		  <div class="product-show-title">
-			    			<h3>{{$article->title}}</h3>
-			    		</div>
-			    	
-			    	<div class="product-show-content">
-			    			<div class="product-add">
-			    			<span>发布时间:</span>
-			    			<div><a href="#">{{$article->created_at}}</a></div>
-			    			<i class="am-icon-dribbble"></i>
-			    		</div>
-			    		<div class="product-intro">
-			    			<span>详情介绍:</span>
-			    			<div><p>{{$article->desc}}</p></div>
-			    		  <i class="am-icon-tasks"></i>
-			    		</div>
-			    	</div>
-			    	</div>	
-			    	<div class="clear"></div>
-	    	</div>
-	    </li>
-	    @endif
-	    @endforeach	
-	    <div class="clear"></div>
-	</ul>
+<div class="am-container-1">
+	 <ul data-am-widget="gallery" class="am-gallery am-avg-sm-1
+  am-avg-md-3 am-avg-lg-4 am-gallery-bordered customer-case-ul" data-am-gallery="{  }" >
+  @foreach($cases as $case)
+      <li>
+        <div class="am-gallery-item">
+            <a href="{{$base->url}}case-inform" class="">
+            	<div class="customer-case-img">
+              <img src="{{$base->url.'uploads/'.$case->cover}}" />
+             </div>
+                <h3 class="am-gallery-title">{{$case->title}}</h3>
+                <div class="am-gallery-desc gallery-words">{{$case->desc}}</div>
+            </a>
+        </div>
+      </li>
+    @endforeach
+  </ul>
+	
 </div>
-
-  
-   
+<div class="part-all gray-li">
+<div class="customer  am-container-1">
+		<div class="part-title">
+			<i class="am-icon-users part-title-i"></i>
+			<span class="part-title-span">服务客户</span>
+			<p>Serve Customers</p>
+		</div>
 		
+		<div class="am-slider am-slider-default am-slider-carousel part-all" data-am-flexslider="{itemWidth:150, itemMargin: 5, slideshow: false}" style="  background-color: #f0eeed; box-shadow:none;">
+		  <ul class="am-slides">
+		    <li><img src="{{$base->url}}img/ptn4.png"/></li>
+		    <li><img src="{{$base->url}}img/ptn5.png"/></li>
+		    <li><img src="{{$base->url}}img/ptn6.png"/></li>
+		    <li><img src="{{$base->url}}img/ptn7.png"/></li>
+		    <li><img src="{{$base->url}}img/ptn8.png"/></li>
+		    <li><img src="{{$base->url}}img/ptn4.png"/></li>
+		    <li><img src="{{$base->url}}img/ptn5.png"/></li>
+		    <li><img src="{{$base->url}}img/ptn6.png"/></li>
+		    <li><img src="{{$base->url}}img/ptn7.png"/></li>
+		    <li><img src="{{$base->url}}img/ptn8.png"/></li>
+		  </ul>
+		</div>
+</div>
 </div>
 
 <footer class="footer ">
-    
+	
 <ul>
         
         <li class="am-u-lg-4 am-u-md-4 am-u-sm-12 part-5-li2">
@@ -150,6 +123,7 @@
                     <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}product-show">产品展示</a></li>
                     <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}customer-case">客户案例</a></li>
                     <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}about-us">关于我们</a></li>
+                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}recruit">招贤纳士</a></li>
                     <div class="clear"></div>
                 </ul>
             </div>
@@ -169,7 +143,6 @@
 
 <!--[if (gte IE 9)|!(IE)]><!-->
 <script src="{{$base->url}}js/jquery.min.js"></script>
-<!--<![endif]-->
 <script src="{{$base->url}}js/amazeui.min.js"></script>
 
 </html>

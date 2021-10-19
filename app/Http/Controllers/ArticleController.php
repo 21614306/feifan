@@ -36,40 +36,70 @@ class ArticleController extends Controller
 
     public function solutions()
     {
-        //  $keyword = $req->keyword;
-        // $auths = Authentication::where('name','like','%'.$keyword.'%')->get();
+        $sysAuths = Authentication::all()->where('type','体系验厂');
+        $cusAuths = Authentication::all()->where('type','客户验厂');
         $base = Basis::find(1);
         $companys = Company::all();
         return view('solutions',[
-            'base'=>$base
+            'sysAuths'=>$sysAuths,
+            'cusAuths'=>$cusAuths,
+            'base'=>$base,
         ]);
     }
 
+
+    //GRS认证
        public function productShow()
     {
-        return view('productShow',[]);
+        // $auths = Authentication::where('name','like','%'.$keyword.'%')->get();
+        $base = Basis::find(1);
+        $companys = Company::all();
+        $grsArticles = Article::where('title','like','%GRS%')->orderBy('updated_at','desc')->take(5)->get();
+
+        return view('productShow',[
+            'base'=>$base,
+            'grsArticles'=>$grsArticles,
+        ]);
     }
 
 
        public function customerCase()
     {
-        return view('customerCase',[]);
+        $base = Basis::find(1);
+        $cases = Article::where('type','case_news')->orderBy('updated_at','desc')->take(8)->get();
+        return view('customerCase',[
+            'base'=>$base,
+            'cases'=>$cases,
+        ]);
     }
 
 
        public function serviceCenter()
     {
-        return view('serviceCenter',[]);
+        $base = Basis::find(1);
+
+        return view('serviceCenter',[
+            'base'=>$base
+        ]);
     }
 
        public function news()
     {
-        return view('news',[]);
+        $base = Basis::find(1);
+
+        return view('news',[
+            'base'=>$base
+        ]);
     }
 
     public function about()
     {
-        return view('about',[]);
+        $base = Basis::find(1);
+
+        return view('about',[
+            'base'=>$base
+            
+        ]);
     }
 
    //    public function authDetail(Request $req)

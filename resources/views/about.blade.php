@@ -18,8 +18,8 @@
 <header class="am-topbar header">
     <div class="am-container-1">
         <div class="left hw-logo">
-          <img class=" logo" src="{{$base->url}}img/HENGWANG.png"></img>
-          <img class="word" src="{{$base->url}}img/hw-word.png"></img>
+          <img class=" logo" src="{{$base->url.'uploads/'.$base->logo}}"></img>
+          <!-- <img class="word" src="{{$base->url}}img/hw-word.png"></img> -->
     </div>
   <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
           data-am-collapse="{target: '#doc-topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span
@@ -31,10 +31,9 @@
     <div class=" am-topbar-left am-form-inline am-topbar-right" role="search">
       <ul class="am-nav am-nav-pills am-topbar-nav hw-menu">
       <li><a href="/">首页</a></li>
-      <li><a href="{{$base->url}}solutions">解决方案</a></li>
-      <li><a href="{{$base->url}}product-show">产品展示 </a></li>
+      <li><a href="{{$base->url}}solutions">验厂服务</a></li>
+      <li><a href="{{$base->url}}product-show">GRS认证</a></li>
       <li><a href="{{$base->url}}customer-case">客户案例</a></li>
-      <li><a href="{{$base->url}}service-center">服务中心 </a></li>
       <li><a href="{{$base->url}}news">新闻动态 </a></li>
       <li class="hw-menu-active"><a href="{{$base->url}}about-us">关于我们</a></li>
     </ul>
@@ -51,9 +50,9 @@
             <p>About Us</p>
         </div>
         <div class="right toppic-progress">
-            <span><a href="index.html" class="w-white">首页</a></span>
+            <span><a href="/" class="w-white">首页</a></span>
             <i class=" am-icon-arrow-circle-right w-white"></i>
-            <span><a href="about-us.html" class="w-white">关于我们</a></span>
+            <span><a href="{{$base->url}}about-us" class="w-white">关于我们</a></span>
         </div>
     </div>
 </div>
@@ -193,10 +192,9 @@
             <div class="part-5-title">相关链接</div>
             <div class="part-5-words2">
                 <ul class="part-5-words2-ul">
-                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}solutions">解决方案</a></li>
+                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}solutions">验厂服务</a></li>
                     <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}product-show">产品展示</a></li>
                     <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}customer-case">客户案例</a></li>
-                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}service-center">服务中心</a></li>
                     <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}about-us">关于我们</a></li>
                     <div class="clear"></div>
                 </ul>
@@ -214,8 +212,8 @@
 <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
 <script src="assets/js/amazeui.ie8polyfill.min.js"></script>
 <![endif]-->
-<script src="js/jquery.min.js"></script>
-<script src="js/amazeui.min.js"></script>
+<script src="{{$base->url}}js/jquery.min.js"></script>
+<script src="{{$base->url}}js/amazeui.min.js"></script>
 <!--[if (gte IE 9)|!(IE)]><!-->
 
 </html>

@@ -3,7 +3,7 @@
 <html>
 <head lang="en">
   <meta charset="UTF-8">
-  <title>解决方案</title>
+  <title>验厂服务</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport"
         content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0,user-scalable=no">
@@ -19,8 +19,8 @@
 <header class="am-topbar header">
     <div class="am-container-1">
         <div class="left hw-logo">
-          <img class=" logo" src="{{$base->url}}img/HENGWANG.png"></img>
-          <img class="word" src="{{$base->url}}img/hw-word.png"></img>
+          <img class="logo" src="{{$base->url.'uploads/'.$base->logo}}"></img>
+          <!-- <img class="word" src="{{$base->url}}img/hw-word.png"></img> -->
     </div>
   <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
           data-am-collapse="{target: '#doc-topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span
@@ -31,11 +31,10 @@
 
     <div class=" am-topbar-left am-form-inline am-topbar-right" role="search">
       <ul class="am-nav am-nav-pills am-topbar-nav hw-menu">
-      <li><a href="{{$base->url}}index">首页</a></li>
-      <li class="hw-menu-active" ><a href="{{$base->url}}solutions">解决方案</a></li>
-      <li><a href="{{$base->url}}product-show">产品展示 </a></li>
+      <li><a href="{{$base->url}}">首页</a></li>
+      <li class="hw-menu-active" ><a href="{{$base->url}}solutions">验厂服务</a></li>
+      <li><a href="{{$base->url}}product-show">GRS认证</a></li>
       <li><a href="{{$base->url}}customer-case">客户案例</a></li>
-      <li><a href="{{$base->url}}service-center">服务中心 </a></li>
       <li ><a href="{{$base->url}}news">新闻动态 </a></li>
       <li><a href="{{$base->url}}about-us">关于我们</a></li>
     </ul>
@@ -49,13 +48,13 @@
 	<div class="am-container-1">
 	 <div class="toppic-title left">
 			<i class="am-icon-lightbulb-o toppic-title-i"></i>
-			<span class="toppic-title-span">解决方案</span>
+			<span class="toppic-title-span">验厂服务</span>
 			<p>Solutions</p>
 		</div>
 		<div class="right toppic-progress">
-			<span><a href="index.html" class="w-white">首页</a></span>
+			<span><a href="/" class="w-white">首页</a></span>
 			<i class=" am-icon-arrow-circle-right w-white"></i>
-			<span><a href="solutions.html" class="w-white">解决方案</a></span>
+			<span><a href="{{$base->url}}solutions" class="w-white">验厂服务</a></span>
 		</div>
 	</div>
 </div>
@@ -68,100 +67,45 @@
       <ul class="am-tabs-nav am-cf solutions-tabs-ul ">
          <li class="am-active solutions-tabs-ul-li1"><a href="[data-tab-panel-0]" ><i class=" am-icon-desktop"></i><span>客户验厂</span></a></li>
           <li class="solutions-tabs-ul-li2"><a href="[data-tab-panel-1]"><i class=" am-icon-mobile-phone mobile-phone"></i><span>体系验厂</span></a></li>
-          <li class="solutions-tabs-ul-li3"><a href="[data-tab-panel-2]" ><i class=" am-icon-desktop"></i><span>grs验厂</span></a></li>
       </ul>
 
       <div class="am-tabs-bd solutions-tabs-content ">
           <div data-tab-panel-0 class="am-tab-panel am-active">
           	<ul class=" solutions-content-ul">
+                @foreach($cusAuths as $cusAuth)
             	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
-            		<a href="solutions-inform.html">
+            		<a href="{{$base->url.'solutions-inform/?'.$cusAuth->id}}">
             		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
-            			<img src="img/app1.png" />
+            			<img src="{{$base->url.'uploads/'.$cusAuth->cover}}" />
             		</div>
             		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
-            			<h5>优悦解决方案</h5>
-            			<p>华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，运单跟踪，</p>
+            			<h5>{{$cusAuth->name}}</h5>
+            			<p>{{$cusAuth->introduction}}</p>
             		</div>
             		</a>
             	</li>
-            	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
-            		<a href="#">
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
-            			<img src="img/app2.png" />
-            		</div>
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
-            			<h5>优悦解决方案</h5>
-            			<p>华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，运单跟踪，</p>
-            		</div>
-            		</a>
-            	</li>
+                @endforeach
             	<div class="clear"></div>
             </ul>
             
           </div>
           <div data-tab-panel-1 class="am-tab-panel ">
              <ul class="am-container-1 solutions-content-ul">
+                @foreach($sysAuths as $sysAuth)
+
             	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
-            		<a href="#">
+            		<a href="{{$base->url}}">
             		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
-            			<img src="img/app1.png" />
+            			<img src="{{$base->url.'uploads/'.$sysAuth->cover}}" />
             		</div>
             		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
-            			<h5>优悦解决方案</h5>
-            			<p>华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，运单跟踪，</p>
+            			<h5>{{$sysAuth->name}}</h5>
+            			<p>{{$sysAuth->introduction}}</p>
             		</div>
             		</a>
             	</li>
-            	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
-            		<a href="#">
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
-            			<img src="img/app2.png" />
-            		</div>
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
-            			<h5>优悦解决方案</h5>
-            			<p>华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，运单跟踪，</p>
-            		</div>
-            		</a>
-            	</li>
-            	
-            	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12  am-u-end">
-            		<a href="#">
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
-            			<img src="img/app2.png" />
-            		</div>
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
-            			<h5>优悦解决方案</h5>
-            			<p>华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，运单跟踪，</p>
-            		</div>
-            	</li>
-            	</a>
-            </ul>
-          </div>
-          <div data-tab-panel-2 class="am-tab-panel ">
-            <ul class="am-container-1 solutions-content-ul">
-            	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
-            		<a href="#">
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
-            			<img src="img/app1.png" />
-            		</div>
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
-            			<h5>优悦解决方案</h5>
-            			<p>华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，运单跟踪，</p>
-            		</div>
-            		</a>
-            	</li>
-            	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
-            		<a href="#">
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
-            			<img src="img/app2.png" />
-            		</div>
-            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
-            			<h5>优悦解决方案</h5>
-            			<p>华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，运单跟踪，</p>
-            		</div>
-            		</a>
-            	</li>
+                @endforeach
+            
             </ul>
           </div>
         
@@ -188,10 +132,9 @@
             <div class="part-5-title">相关链接</div>
             <div class="part-5-words2">
                 <ul class="part-5-words2-ul">
-                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}solutions">解决方案</a></li>
+                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}solutions">验厂服务</a></li>
                     <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}product-show">产品展示</a></li>
                     <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}customer-case">客户案例</a></li>
-                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}service-center">服务中心</a></li>
                     <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}about-us">关于我们</a></li>
                     <div class="clear"></div>
                 </ul>

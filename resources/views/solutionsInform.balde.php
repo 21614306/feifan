@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
   <meta charset="UTF-8">
-  <title>解决方案详情</title>
+  <title>验厂服务详情</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport"
         content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0,user-scalable=no">
@@ -10,7 +10,7 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="Cache-Control" content="no-siteapp"/>
   
-  <link rel="alternate icon" type="{{$base->url}}img/HENGWANG.png" href="{{$base->url}}img/HENGWANG.png">
+  <link rel="alternate icon" type="{{$base->url.'uploads/'.$base->logo}}" href="{{$base->url.'uploads/'.$base->logo}}">
   <link rel="stylesheet" href="{{$base->url}}css/amazeui.css"/>
   <link rel="stylesheet" href="{{$base->url}}css/style.css"/>
 </head>
@@ -18,8 +18,8 @@
 <header class="am-topbar header">
     <div class="am-container-1">
         <div class="left hw-logo">
-          <img class=" logo" src="{{$base->url}}img/HENGWANG.png"></img>
-          <img class="word" src="{{$base->url}}img/hw-word.png"></img>
+          <img class=" logo" src="{{$base->url.'uploads/'.$base->logo}}"></img>
+          <!-- <img class="word" src="{{$base->url}}img/hw-word.png"></img> -->
     </div>
   <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
           data-am-collapse="{target: '#doc-topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span
@@ -31,8 +31,8 @@
     <div class=" am-topbar-left am-form-inline am-topbar-right" role="search">
       <ul class="am-nav am-nav-pills am-topbar-nav hw-menu">
       <li><a href="{{$base->url}}index.html">首页</a></li>
-      <li><a href="{{$base->url}}solutions.html">解决方案</a></li>
-      <li><a href="{{$base->url}}product-show.html">产品展示 </a></li>
+      <li><a href="{{$base->url}}solutions.html">验厂服务</a></li>
+      <li><a href="{{$base->url}}product-show.html">GRS认证</a></li>
       <li><a href="{{$base->url}}customer-case.html">客户案例</a></li>
       <li><a href="{{$base->url}}service-center.html">服务中心 </a></li>
       <li class="hw-menu-active"><a href="{{$base->url}}news.html">新闻动态 </a></li>
@@ -51,7 +51,7 @@
 			<p>Information</p>
 		</div>
 		<div class="right toppic-progress">
-			<span><a href="solutions.html" class="w-white">解决方案</a></span>
+			<span><a href="solutions.html" class="w-white">验厂服务</a></span>
 			<i class=" am-icon-arrow-circle-right w-white"></i>
 			<span><a href="solutions-inform.html" class="w-white">方案详情</a></span>
 		</div>
@@ -123,7 +123,7 @@
             <div class="part-5-title">相关链接</div>
             <div class="part-5-words2">
                 <ul class="part-5-words2-ul">
-                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}solutions">解决方案</a></li>
+                    <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}solutions">验厂服务</a></li>
                     <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}product-show">产品展示</a></li>
                     <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}customer-case">客户案例</a></li>
                     <li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="{{$base->url}}service-center">服务中心</a></li>
