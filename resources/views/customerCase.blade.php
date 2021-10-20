@@ -63,7 +63,7 @@
   @foreach($cases as $case)
       <li>
         <div class="am-gallery-item">
-            <a href="{{$base->url}}case-inform" class="">
+            <a href="{{$base->url.'case-inform?id='.$case->id}}" class="">
             	<div class="customer-case-img">
               <img src="{{$base->url.'uploads/'.$case->cover}}" />
              </div>

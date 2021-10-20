@@ -48,6 +48,40 @@ class ArticleController extends Controller
     }
 
 
+      //    public function authDetail(Request $req)
+   //  {
+   //   $id = $req->id;
+   //   $auth = Authentication::find($id);
+   //   $auths = Authentication::all()->where('type','体系验厂');
+   //   $base = Basis::find(1);
+   //   $companys = Company::all();
+   //   $articles = Article::where('title','like','%'.$auth->name.'%')->get();
+   //   // dd($articles);
+
+   //   // dd($base);`
+   //   return view('authDetail',[
+   //     'auth' => $auth,
+   //     'auths' => $auths,
+   //     'base' => $base,
+   //     'companys'=>$companys,
+   //     'articles' =>$articles
+   //   ]);
+   //  }
+
+    public function solutionsInform(Request $req)
+    {
+     $id = $req->id;
+     $auth = Authentication::find($id);
+     $base = Basis::find(1);
+     return view('solutionsInform',[
+      'auth'=>$auth,
+      'base'=>$base,
+     ]);
+
+
+    }
+
+
     //GRS认证
        public function productShow()
     {
@@ -67,10 +101,23 @@ class ArticleController extends Controller
     {
         $base = Basis::find(1);
         $cases = Article::where('type','case_news')->orderBy('updated_at','desc')->take(8)->get();
+        // dd($cases);
         return view('customerCase',[
             'base'=>$base,
             'cases'=>$cases,
         ]);
+    }
+
+    public function caseInform(Request $req)
+    {
+        $id = $req->id;
+        $article = Article::find($id);
+        $base = Basis::find(1);
+     return view('caseInform',[
+      'article'=>$article,
+      'base'=>$base,
+     ]);
+
     }
 
 
@@ -102,25 +149,7 @@ class ArticleController extends Controller
         ]);
     }
 
-   //    public function authDetail(Request $req)
-   //  {
-   //  	$id = $req->id;
-   //  	$auth = Authentication::find($id);
-   //  	$auths = Authentication::all()->where('type','体系验厂');
-   //  	$base = Basis::find(1);
-   //  	$companys = Company::all();
-   //  	$articles = Article::where('title','like','%'.$auth->name.'%')->get();
-   //  	// dd($articles);
-
-   //  	// dd($base);`
-   //  	return view('authDetail',[
-   //  		'auth' => $auth,
-   //  		'auths' => $auths,
-   //  		'base' => $base,
-   //  		'companys'=>$companys,
-   //  		'articles' =>$articles
-   //  	]);
-   //  }
+ 
 
 
    //  public function authSearch(Request $req)

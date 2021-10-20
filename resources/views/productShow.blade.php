@@ -72,7 +72,7 @@
 			    	<div class="product-show-content">
 			    			<div class="product-add">
 			    			<span>发布时间:</span>
-			    			<div><a href="#">{{$article->created_at}}</a></div>
+			    			<div><a href="">{{$article->created_at}}</a></div>
 			    			<i class="am-icon-dribbble"></i>
 			    		</div>
 			    		<div class="product-intro">

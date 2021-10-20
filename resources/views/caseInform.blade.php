@@ -67,14 +67,13 @@
 	    	<div class="product-content">
 			    	<div class="left am-u-sm-12 am-u-md-6 am-u-lg-6 product-content-left case-left">
 			    		<div class="product-show-title">
-			    			<h3>物流红娘APP</h3>
+			    			<h3>{{$article->title}}</h3>
 			    		</div>
 			    	
 			    	<div class="product-show-content">			    		
 			    		<div class="product-intro case-inform">
 			    			<span>详情介绍：</span>
-			    			<div><p>一款响应式商城模板，是专门针对中小物流企业的实际业务需求量身定做的物流管理系统，具有界面简洁、流程灵活、操作方便、易于实施的特点。 该产品基于领先的云计算技术，用户无需在本地安装软件、无需购买专门的服务器硬件、无需专业的IT人员进行维护， 只要打开浏览器，登录网站，即可使用在线物流软件。
-			    			技术，用户无需在本地安装软件、无需购买专门的服务器硬件、无需专业的IT人员进行维护， 只要打开浏览器，登录网站，即可是专门针对中小物流企业的实际业务需求量身定做的物流管理系统，具有界面简洁、</p></div>
+			    			<div><p>{{$article->content}}</p></div>
 			    		  <i class="am-icon-tasks"></i>
 			    		  <img src="{{$base->url}}img/erweima.png" />
 			    		</div>

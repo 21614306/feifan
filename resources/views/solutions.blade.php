@@ -31,7 +31,7 @@
 
     <div class=" am-topbar-left am-form-inline am-topbar-right" role="search">
       <ul class="am-nav am-nav-pills am-topbar-nav hw-menu">
-      <li><a href="{{$base->url}}">首页</a></li>
+      <li><a href="/">首页</a></li>
       <li class="hw-menu-active" ><a href="{{$base->url}}solutions">验厂服务</a></li>
       <li><a href="{{$base->url}}product-show">GRS认证</a></li>
       <li><a href="{{$base->url}}customer-case">客户案例</a></li>
@@ -74,7 +74,7 @@
           	<ul class=" solutions-content-ul">
                 @foreach($cusAuths as $cusAuth)
             	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
-            		<a href="{{$base->url.'solutions-inform/?'.$cusAuth->id}}">
+            		<a href="{{$base->url.'solutions-inform?id='.$cusAuth->id}}">
             		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
             			<img src="{{$base->url.'uploads/'.$cusAuth->cover}}" />
             		</div>
@@ -94,7 +94,7 @@
                 @foreach($sysAuths as $sysAuth)
 
             	<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
-            		<a href="{{$base->url}}">
+            		<a href="{{$base->url.'solutions-inform?id='.$sysAuth->id}}">
             		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
             			<img src="{{$base->url.'uploads/'.$sysAuth->cover}}" />
             		</div>

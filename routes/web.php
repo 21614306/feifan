@@ -18,6 +18,9 @@ use  App\Http\Controllers\ArticleController;
 Route::get('/', [ArticleController::class, 'index'] );
 
 Route::get('/solutions', [ArticleController::class, 'solutions'] );
+Route::get('/solutions-inform', [ArticleController::class, 'solutionsInform'] );
+Route::get('/case-inform', [ArticleController::class, 'caseInform'] );
+
 Route::get('/product-show', [ArticleController::class, 'productShow'] );
 Route::get('/customer-case', [ArticleController::class, 'customerCase'] );
 Route::get('/service-center', [ArticleController::class, 'serviceCenter'] );
