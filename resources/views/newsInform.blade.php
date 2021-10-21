@@ -30,13 +30,12 @@
 
     <div class=" am-topbar-left am-form-inline am-topbar-right" role="search">
       <ul class="am-nav am-nav-pills am-topbar-nav hw-menu">
-      <li><a href="{{$base->url}}index.html">首页</a></li>
-      <li><a href="{{$base->url}}solutions.html">验厂服务</a></li>
-      <li><a href="{{$base->url}}product-show.html">GRS认证</a></li>
-      <li><a href="{{$base->url}}customer-case.html">客户案例</a></li>
-      <li><a href="{{$base->url}}service-center.html">服务中心 </a></li>
-      <li class="hw-menu-active"><a href="{{$base->url}}news.html">新闻动态 </a></li>
-      <li><a href="{{$base->url}}about-us.html">关于我们</a></li>
+      <li><a href="/">首页</a></li>
+      <li><a href="{{$base->url}}solutions">验厂服务</a></li>
+      <li><a href="{{$base->url}}product-show">GRS认证</a></li>
+      <li><a href="{{$base->url}}customer-case">客户案例</a></li>
+      <li class="hw-menu-active"><a href="{{$base->url}}news">新闻动态 </a></li>
+      <li><a href="{{$base->url}}about-us">关于我们</a></li>
     </ul>
     </div>
 
@@ -51,52 +50,24 @@
 			<p>News Information</p>
 		</div>
 		<div class="right toppic-progress">
-			<span><a href="news.html" class="w-white">新闻动态</a></span>
+			<span><a href="{{$base->url}}news" class="w-white">新闻动态</a></span>
 			<i class=" am-icon-arrow-circle-right w-white"></i>
-			<span><a href="news-inform.html" class="w-white">新闻详情</a></span>
+			<span><a href="{{$base->url}}news-inform" class="w-white">新闻详情</a></span>
 		</div>
 	</div>
 </div>
 
 <div class="am-container-1 margin-t30">
 	<div class="words-title ">
-		<span>关于召开2020全国互联网工作年会的通知</span>
-		<div>2020-12-29</div>
+		<span>{{$article->title}}</span>
+		<div>{{$article->updated_at}}</div>
 	</div>
 </div>
 		
 <div class="solution-inform">
 	<div class=" solution-inform-content-all">
 		<div class="solution-inform-content">
-		    <p class="inform-content-p">华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，</p>
-	      <div class="solution-inform-content-img">
-	      	<img src="{{$base->url}}img/inform.png"/>
-	      	<div class="clear"></div>
-	      </div>
-	      <p class="solution-inform-content-words">(一) 业务管理预受理单据
-1) 预受理单据用于需要上门取货的客户及货物信息的录入。预受理单据可以由发货客户远程录入，也可以由业务员录入。录入的预受理单据信息主要包括以下内容：
-2) 发货人信息；收货人信息；终点站、到站、付款方式是否保险（保价费）及
-3) 货物信息：货物名称、货物包装、件数、运费。
-4) 预受理单支持多种条件组合查询。
-	</p>
-	
-	<p class="solution-inform-content-words">
-醒信息后，可以点击进入进行预受理派车操作（录入车号、默认司机信息（姓名、电话），提交派车）。
-2) 也可以通过查询客户名称、可以通过日期实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，</br>
-	</p>
-	
-	 <p class="solution-inform-content-words">(一) 业务管理预受理单据
-1) 预受理单据用于需要上门取货的客户及货物信息的录入。预受理单据可以由发货客户远程录入，也可以由业务员录入。录入的预受理单据信息主要包括以下内容：
-2) 发货人信息；收货人信息；终点站、到站、付款方式是否保险（保价费）及
-3) 货物信息：货物名称、货物包装、件数、运费。
-4) 预受理单支持多种条件组合查询。
-	</p>
-	
-	<p class="solution-inform-content-words">
-醒信息后，可以点击进入进行预受理派车操作（录入车号、默认司机信息（姓名、电话），提交派车）。
-2) 也可以通过查询客户名称、可以通过日期实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，</br>
-	</p>
-	 
+                            @markdown{{$article->content}}@endmarkdown
   
   
 		</div>

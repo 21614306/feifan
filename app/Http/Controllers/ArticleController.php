@@ -19,8 +19,8 @@ class ArticleController extends Controller
     public function index()
     {
     	$auths = Authentication::all();
-    	$cases = Article::all()->where('type','case_news');
-    	$news = Article::all()->where('type','company_news');
+    	$cases = Article::all()->where('type','case_news')->take(4);
+    	$news = Article::all()->where('type','industry_news')->take(4);
     	$base = Basis::find(1);
     	$companys = Company::all();
 
@@ -130,13 +130,62 @@ class ArticleController extends Controller
         ]);
     }
 
+
+
+
+       //       public function success()
+   //  {
+      
+   //   $base = Basis::find(1);
+   //   $companys = Company::all();
+   //      $articles = Article::where('type','case_news')->paginate(5);
+   //      $industry_news = Article::where('type','industry_news')->paginate(5);
+   //      $cases = Article::where('type','case_news')->paginate(5);
+   //      $auths = Authentication::all();
+   //      $args = [
+   //          'lastPage'=>$articles->lastPage(),
+   //          'currentPage'=>$articles->currentPage(),
+   //      ];
+   //   return view('success',[
+   //          'articles'=>$articles,
+   //          'case'=>$articles,
+   //          'args' =>$args,
+   //     'base' => $base,
+   //     'industry_news'=>$industry_news,
+   //          'cases'=>$cases,
+   //          'companys'=>$companys,
+   //          'auths'=>$auths
+   //   ]);
+   //  }
+
+
+
        public function news()
     {
         $base = Basis::find(1);
+        $cases = Article::where('type','industry_news')->paginate(6);
+               $args = [
+            'lastPage'=>$cases->lastPage(),
+            'currentPage'=>$cases->currentPage(),
+        ];
 
         return view('news',[
-            'base'=>$base
+            'base'=>$base,
+            'news'=>$cases,
+            'args' =>$args,
         ]);
+    }
+
+
+    public function newsInform(Request $req)
+    {
+        $base = Basis::find(1);
+        $id = $req->id;
+        $article = Article::find($id);
+      return view('newsInform',[
+        'base'=>$base,
+        'article'=>$article,
+      ]);
     }
 
     public function about()

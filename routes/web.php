@@ -20,6 +20,8 @@ Route::get('/', [ArticleController::class, 'index'] );
 Route::get('/solutions', [ArticleController::class, 'solutions'] );
 Route::get('/solutions-inform', [ArticleController::class, 'solutionsInform'] );
 Route::get('/case-inform', [ArticleController::class, 'caseInform'] );
+Route::get('/news-inform', [ArticleController::class, 'newsInform'] );
+
 
 Route::get('/product-show', [ArticleController::class, 'productShow'] );
 Route::get('/customer-case', [ArticleController::class, 'customerCase'] );

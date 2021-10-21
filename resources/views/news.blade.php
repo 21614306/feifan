@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
   <meta charset="UTF-8">
-  <title>新闻详情</title>
+  <title>新闻动态</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport"
         content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0,user-scalable=no">
@@ -10,16 +10,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="Cache-Control" content="no-siteapp"/>
   
-  <link rel="alternate icon" type="{{$base->url.'uploads/'.$base->logo}}" href="{{$base->url.'uploads/'.$base->logo}}">
+  <link rel="alternate icon" type="{{$base->url.'uploads/'.$base->logo}}" href="{{$base->url}}img/hengwang-1.png">
   <link rel="stylesheet" href="{{$base->url}}css/amazeui.css"/>
   <link rel="stylesheet" href="{{$base->url}}css/style.css"/>
 </head>
 <body>
 <header class="am-topbar header">
-    <div class="am-container-1">
-        <div class="left hw-logo">
-          <img class=" logo" src="{{$base->url.'uploads/'.$base->logo}}"></img>
-          <!-- <img class="word" src="{{$base->url}}img/hw-word.png"></img> -->
+	<div class="am-container-1">
+		<div class="left hw-logo">
+		  <img class=" logo" src="{{$base->url.'uploads/'.$base->logo}}"></img>
     </div>
   <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
           data-am-collapse="{target: '#doc-topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span
@@ -32,9 +31,9 @@
       <ul class="am-nav am-nav-pills am-topbar-nav hw-menu">
       <li><a href="/">首页</a></li>
       <li><a href="{{$base->url}}solutions">验厂服务</a></li>
-      <li><a href="{{$base->url}}product-show">GRS认证</a></li>
+      <li><a href="{{$base->url}}product-show">GRS认证 </a></li>
       <li><a href="{{$base->url}}customer-case">客户案例</a></li>
-      <li class="hw-menu-active"><a href="{{$base->url}}news">新闻动态 </a></li>
+      <li class="{{$base->url}}hw-menu-active"><a href="news">新闻动态 </a></li>
       <li><a href="{{$base->url}}about-us">关于我们</a></li>
     </ul>
     </div>
@@ -43,70 +42,96 @@
   </div>
 </header>
 <div class="toppic">
-     <div class="am-container-1">
-     <div class="toppic-title left">
-            <i class="am-icon-newspaper-o toppic-title-i"></i>
-            <span class="toppic-title-span">新闻详情</span>
-            <p>News Information</p>
-        </div>
-        <div class="right toppic-progress">
-            <span><a href="news" class="w-white">新闻动态</a></span>
-            <i class=" am-icon-arrow-circle-right w-white"></i>
-            <span><a href="news-inform" class="w-white">新闻详情</a></span>
-        </div>
-    </div>
+	 <div class="am-container-1">
+	 <div class="toppic-title left">
+			<i class="am-icon-newspaper-o toppic-title-i"></i>
+			<span class="toppic-title-span">新闻动态</span>
+			<p>Hengwang News</p>
+		</div>
+		<div class="right toppic-progress">
+			<span><a href="index" class="w-white">首页</a></span>
+			<i class=" am-icon-arrow-circle-right w-white"></i>
+			<span><a href="news" class="w-white">新闻动态</a></span>
+		</div>
+	</div>
 </div>
 
-<div class="am-container-1 margin-t30">
-    <div class="words-title ">
-        <span>关于召开2020全国互联网工作年会的通知</span>
-        <div>2020-12-29</div>
-    </div>
-</div>
-        
-<div class="solution-inform">
-    <div class=" solution-inform-content-all">
-        <div class="solution-inform-content">
-            <p class="inform-content-p">华天公路货运管理系统是华天软件为物流货运企业全力打造的一套物流网络信息化的实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，</p>
-          <div class="solution-inform-content-img">
-            <img src="{{$base->url}}img/inform.png"/>
-            <div class="clear"></div>
+
+	
+<div class="am-container-1 news-content-all">
+<div class="left am-u-sm-12 am-u-md-8 am-u-lg-9 ">
+	  <ul class="news-ul">
+	  	@foreach($news as $new)
+	  	<li class="am-u-sm-12 am-u-md-6 am-u-lg-4 ">
+	  		<a href="{{$base->url.'news-inform?id='.$new->id}}">
+	  		<div class="news-ul-liall">
+	  		  	<img class="news-ul-liimg" src="{{$base->url.'uploads/'.$new->cover}}"/>		  	  		  	 
+	  		  <div class="inform-list">
+		  		  	<div class="inform-list-date"><i class="am-icon-arrow-circle-right"></i>{{$new->updated_at}}</div>
+		  		  	<div class="inform-list-numb"><i class="am-icon-arrow-circle-right"></i>点击次数：{{$new->readNum}}</div>
+	  		  </div>		  
+	  		  <span>{{$new->title}}</span>
+	  		  <p>{{$new->desc}}</p>
+	  	    <span class="see-more3">查看更多<i class="am-icon-angle-double-right"></i></span>
+	  	  </div>
+	  	  </a>
+	  	</li>
+	  	@endforeach
+	  	<div class="clear"></div>
+		</ul>
+		<ul class="am-pagination ">
+                        @if($args['lastPage'] != 1)
+
+	  	 <li ><a href="{{$base->url.'news?page=1'}}">&laquo;</a></li>
+                           @if($args['currentPage'] != 1)
+
+				  <li><a href="#">上一页</a></li> 
+                            @endif
+                            @for($i=1;$i<=$args['lastPage'];$i++)
+
+				  <li><a class="current-page" href="{{$base->url.'news?page='.$i}}">{{$i}}</a></li>
+				  @endfor
+                            @if($args['currentPage'] != $args['lastPage'])
+				  <li><a href="#">下一页</a></li>
+                            @endif
+				   <li ><a href="{{$base->url.'news?page='.$args['lastPage']}}">&raquo;</a></li>
+	  	 @endif
+
+		</ul>	  
+</div>	  
+
+<div class="left am-u-sm-12 am-u-md-4 am-u-lg-3">
+	
+	<section data-am-widget="accordion" class="am-accordion am-accordion-gapped" data-am-accordion='{  }'>
+		<div class="hot-title"><i class="am-icon-thumbs-o-up"></i>热门新闻 / Hot 	News</div>
+		@foreach($news as $new)
+		@if($loop->index<5)
+      <dl class="am-accordion-item am-active">
+        <dt class="am-accordion-title">
+          {{$new->title}}
+        </dt>
+        <dd class="am-accordion-bd am-collapse am-in">
+          <!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+          <div class="am-accordion-content">
+            {{$new->desc}}
           </div>
-          <p class="solution-inform-content-words">(一) 业务管理预受理单据
-1) 预受理单据用于需要上门取货的客户及货物信息的录入。预受理单据可以由发货客户远程录入，也可以由业务员录入。录入的预受理单据信息主要包括以下内容：
-2) 发货人信息；收货人信息；终点站、到站、付款方式是否保险（保价费）及
-3) 货物信息：货物名称、货物包装、件数、运费。
-4) 预受理单支持多种条件组合查询。
-    </p>
-    
-    <p class="solution-inform-content-words">
-醒信息后，可以点击进入进行预受理派车操作（录入车号、默认司机信息（姓名、电话），提交派车）。
-2) 也可以通过查询客户名称、可以通过日期实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，</br>
-    </p>
-    
-     <p class="solution-inform-content-words">(一) 业务管理预受理单据
-1) 预受理单据用于需要上门取货的客户及货物信息的录入。预受理单据可以由发货客户远程录入，也可以由业务员录入。录入的预受理单据信息主要包括以下内容：
-2) 发货人信息；收货人信息；终点站、到站、付款方式是否保险（保价费）及
-3) 货物信息：货物名称、货物包装、件数、运费。
-4) 预受理单支持多种条件组合查询。
-    </p>
-    
-    <p class="solution-inform-content-words">
-醒信息后，可以点击进入进行预受理派车操作（录入车号、默认司机信息（姓名、电话），提交派车）。
-2) 也可以通过查询客户名称、可以通过日期实在营运解决方案，通过６年的不断积累，汲取数十家物流企业的实战经验，以客户为中心，以业务为纽带，为车辆调度，仓库管理，装车发货，分拣中心，卸货提货，</br>
-    </p>
-     
-  
-  
-        </div>
-    </div>
+        </dd>
+      </dl>
+      @endif
+      @endforeach
+  </section>
+	
 </div>
-  
-   
-        
+
+<div class="clear"></div>
+</div>
+
+
+
+
 
 <footer class="footer ">
-    
+	
 <ul>
         
         <li class="am-u-lg-4 am-u-md-4 am-u-sm-12 part-5-li2">
@@ -136,11 +161,12 @@
    
 </footer>
 
+
 </body>
 <!--[if lt IE 9]>
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
-<script src="assets/{{$base->url}}js/amazeui.ie8polyfill.min.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
 <![endif]-->
 
 <!--[if (gte IE 9)|!(IE)]><!-->

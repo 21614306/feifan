@@ -104,18 +104,18 @@
          <ul data-am-widget="gallery" class=" am-avg-sm-1
   am-avg-md-4 am-avg-lg-4 am-gallery-bordered customer-case-content" >
 @foreach($cases as $case)
-  @if($loop->index>0)
+  @if($loop->index>=0)
       <li class="case-li am-u-sm-6 am-u-md-6 am-u-lg-3">
         <div class="am-gallery-item case-img1">
-            <a href="{{$base->url.'articleDetail?id='.$case->id}}" >
-              <img src="{{$base->url}}img/app1.png"  />
+            <a href="{{$base->url.'news-inform?id='.$case->id}}" >
+              <img src="{{$base->url.'uploads/'.$case->cover}}"  />
             </a>
         </div>
         <div class="case-li-mengban">
             <div class=" case-word">
               <h3 class="am-gallery-title">{{$case->title}}</h3>
               <p>{{$case->created_at}}</p>
-              <a><span><i class="am-icon-eye"></i>查看更多</span></a>
+              <a href="{{$base->url.'news-inform?id='.$case->id}}"><span><i class="am-icon-eye"></i>查看更多</span></a>
            </div>
         </div>
       </li>
@@ -152,9 +152,9 @@
         <div class="news-content ">
                 <ul class="news-content-ul">
                     @foreach($news as $new) 
-                     @if($loop->index>0)
+                     @if($loop->index>=0)
                     <li class="am-u-sm-12 am-u-md-6 am-u-lg-6">
-                        <a href="#">
+                        <a href="{{$base->url.'news-inform?id='.$case->id}}">
                             <div class=" am-u-sm-12 am-u-md-12 am-u-lg-5">
                                 <div class="news-img">
                                 <img src="{{$base->url.'uploads/'.$new->cover}}"></img>
@@ -166,7 +166,7 @@
                                         <p class="news-right-words"> {{
                                         substr($new->desc,1,40
                                         ).'...'}}</p>
-                                        <a><span class="see-more2">查看更多<i class="am-icon-angle-double-right"></i></span></a>
+                                        <a href="{{$base->url.'news'}}"><span class="see-more2">查看更多<i class="am-icon-angle-double-right"></i></span></a>
                                  </div> 
                         <div class="clear"></div>
                         </a>

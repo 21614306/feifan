@@ -30,7 +30,7 @@
 
     <div class=" am-topbar-left am-form-inline am-topbar-right" role="search">
       <ul class="am-nav am-nav-pills am-topbar-nav hw-menu">
-      <li><a href="{{$base->url}}index">首页</a></li>
+      <li><a href="/">首页</a></li>
       <li><a href="{{$base->url}}solutions">验厂服务</a></li>
       <li><a href="{{$base->url}}product-show">GRS认证</a></li>
       <li><a href="{{$base->url}}customer-case">客户案例</a></li>
@@ -75,12 +75,12 @@
 			    			<span>详情介绍：</span>
 			    			<div><p>{{$article->content}}</p></div>
 			    		  <i class="am-icon-tasks"></i>
-			    		  <img src="{{$base->url}}img/erweima.png" />
+			    		  <!-- <img src="{{$base->url}}img/erweima.png" /> -->
 			    		</div>
 			    	</div>
 			    	</div>
 			    	<div class="right am-u-sm-12 am-u-md-6 am-u-lg-6 product-content-right">
-			    		<img class="case-img" src="{{$base->url}}img/case1.png" />
+			    		<img class="case-img" src="{{$base->url.'uploads/'.$article->cover}}" />
 			    	</div>	
 			    	<div class="clear"></div>
 	    	</div>
