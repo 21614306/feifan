@@ -73,7 +73,11 @@
 			    	<div class="product-show-content">			    		
 			    		<div class="product-intro case-inform">
 			    			<span>详情介绍：</span>
-			    			<div><p>{{$article->content}}</p></div>
+			    			<div><p>
+                  @markdown
+                  {{$article->content}}
+                  @endmarkdown
+                </p></div>
 			    		  <i class="am-icon-tasks"></i>
 			    		  <!-- <img src="{{$base->url}}img/erweima.png" /> -->
 			    		</div>
