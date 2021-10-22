@@ -23,11 +23,8 @@ class CompanyController extends AdminController
             $grid->column('tel');
             $grid->column('add');
             $grid->column('qq');
-            $grid->column('created_at');
-            $grid->column('updated_at')->sortable();
-        
             $grid->filter(function (Grid\Filter $filter) {
-                $filter->equal('id');
+            $filter->equal('id');
         
             });
         });
@@ -48,8 +45,6 @@ class CompanyController extends AdminController
             $show->field('tel');
             $show->field('add');
             $show->field('qq');
-            $show->field('created_at');
-            $show->field('updated_at');
         });
     }
 
@@ -66,8 +61,6 @@ class CompanyController extends AdminController
             $form->text('tel');
             $form->text('add');
             $form->text('qq');
-            $form->display('created_at');
-            $form->display('updated_at');
         });
     }
 }
