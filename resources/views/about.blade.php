@@ -61,7 +61,7 @@
     <div class="part-title part-title-mar">
             <a href="customer-case.html">
             <i class=" am-icon-paper-plane part-title-i"></i>
-            <span class="part-title-span">关于恒望</span>
+            <span class="part-title-span">关于非凡</span>
             <p>About Hengwang</p>
             </a>
         </div>
@@ -181,12 +181,21 @@
         <li class="am-u-lg-4 am-u-md-4 am-u-sm-12 part-5-li2">
             <div class="part-5-title">联系我们</div>
             <div class="part-5-words2">
-                <span>地址:XXX</span>
+                <span>地址:福建公司公司</span>
                 <span>电话:18238765101</span>
-                <span>传真:(123) 456-7890</span>
                 <span>邮箱:support@vectorlab.com</span>
                 <span><i class="am-icon-phone"></i><em >027-82671661</em></span>
             </div>
+
+        </li>
+         <li class="am-u-lg-4 am-u-md-4 am-u-sm-12 part-5-li2">
+            <div class="part-5-words2">
+                <span>地址:江西公司</span>
+                <span>电话:{{$base->phone}}</span>
+                <span>邮箱:{{$base->email}}</span>
+                <span><i class="am-icon-phone"></i><em >027-82671661</em></span>
+            </div>
+            
         </li>
         <li class="am-u-lg-4 am-u-md-4 am-u-sm-12 ">
             <div class="part-5-title">相关链接</div>

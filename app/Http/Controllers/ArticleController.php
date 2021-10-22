@@ -44,6 +44,8 @@ class ArticleController extends Controller
             'sysAuths'=>$sysAuths,
             'cusAuths'=>$cusAuths,
             'base'=>$base,
+        'companys'=>$companys
+
         ]);
     }
 
@@ -73,9 +75,13 @@ class ArticleController extends Controller
      $id = $req->id;
      $auth = Authentication::find($id);
      $base = Basis::find(1);
+      $companys = Company::all();
+
      return view('solutionsInform',[
       'auth'=>$auth,
       'base'=>$base,
+        'companys'=>$companys
+
      ]);
 
 
@@ -89,10 +95,13 @@ class ArticleController extends Controller
         $base = Basis::find(1);
         $companys = Company::all();
         $grsArticles = Article::where('title','like','%GRS%')->orderBy('updated_at','desc')->take(5)->get();
+      $companys = Company::all();
 
         return view('productShow',[
             'base'=>$base,
             'grsArticles'=>$grsArticles,
+        'companys'=>$companys
+
         ]);
     }
 
@@ -102,9 +111,13 @@ class ArticleController extends Controller
         $base = Basis::find(1);
         $cases = Article::where('type','case_news')->orderBy('updated_at','desc')->take(8)->get();
         // dd($cases);
+      $companys = Company::all();
+
         return view('customerCase',[
             'base'=>$base,
             'cases'=>$cases,
+        'companys'=>$companys
+
         ]);
     }
 
@@ -113,9 +126,13 @@ class ArticleController extends Controller
         $id = $req->id;
         $article = Article::find($id);
         $base = Basis::find(1);
+      $companys = Company::all();
+
      return view('caseInform',[
       'article'=>$article,
       'base'=>$base,
+        'companys'=>$companys
+
      ]);
 
     }
@@ -124,9 +141,12 @@ class ArticleController extends Controller
        public function serviceCenter()
     {
         $base = Basis::find(1);
+      $companys = Company::all();
 
         return view('serviceCenter',[
-            'base'=>$base
+            'base'=>$base,
+        'companys'=>$companys
+
         ]);
     }
 
@@ -163,6 +183,8 @@ class ArticleController extends Controller
        public function news()
     {
         $base = Basis::find(1);
+      $companys = Company::all();
+
         $cases = Article::where('type','industry_news')->paginate(6);
                $args = [
             'lastPage'=>$cases->lastPage(),
@@ -173,6 +195,8 @@ class ArticleController extends Controller
             'base'=>$base,
             'news'=>$cases,
             'args' =>$args,
+        'companys'=>$companys
+
         ]);
     }
 
@@ -182,18 +206,25 @@ class ArticleController extends Controller
         $base = Basis::find(1);
         $id = $req->id;
         $article = Article::find($id);
+      $companys = Company::all();
+
       return view('newsInform',[
         'base'=>$base,
         'article'=>$article,
+        'companys'=>$companys
+
       ]);
     }
 
     public function about()
     {
         $base = Basis::find(1);
+      $companys = Company::all();
 
         return view('about',[
-            'base'=>$base
+            'base'=>$base,
+        'companys'=>$companys
+            
             
         ]);
     }

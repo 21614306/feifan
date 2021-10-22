@@ -10,9 +10,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="Cache-Control" content="no-siteapp"/>
   
-  <link rel="alternate icon" type="{{$base->url}}img/hengwang-1.png" href="{{$base->url}}img/hengwang-1.png">
+  <link rel="alternate icon" type="{{$base->url}}img/hengwang.png" href="{{$base->url}}img/hengwang.png">
   <link rel="stylesheet" href="{{$base->url}}css/amazeui.css"/>
   <link rel="stylesheet" href="{{$base->url}}css/style.css"/>
+  <link rel="stylesheet" href="{{$base->url}}css/kefu.css"/>
+
 </head>
 
 <body>
@@ -146,7 +148,7 @@
             <a href="{{$base->url}}news">
             <i class="am-icon-newspaper-o part-title-i"></i>
             <span class="part-title-span">新闻动态</span>
-            <p>Hengwang News</p>
+            <p>FeiFan News</p>
             </a>
         </div>
         <div class="news-content ">
@@ -163,9 +165,7 @@
                             <div  class=" am-u-sm-12 am-u-md-12 am-u-lg-7">
                                         <span class="news-right-title">{{$new->title}}</span>
                                         <p class="news-right-time">{{$new->created_at}}</p>
-                                        <p class="news-right-words"> {{
-                                        substr($new->desc,1,40
-                                        ).'...'}}</p>
+                                        <p class="news-right-words"> {{$new->desc}}</p>
                                         <a href="{{$base->url.'news'}}"><span class="see-more2">查看更多<i class="am-icon-angle-double-right"></i></span></a>
                                  </div> 
                         <div class="clear"></div>
@@ -213,12 +213,23 @@
         <li class="am-u-lg-4 am-u-md-4 am-u-sm-12 part-5-li2">
             <div class="part-5-title">联系我们</div>
             <div class="part-5-words2">
-                <span>地址:XXX</span>
+                <span>地址:福建公司公司</span>
                 <span>电话:18238765101</span>
-                <span>传真:(123) 456-7890</span>
                 <span>邮箱:support@vectorlab.com</span>
                 <span><i class="am-icon-phone"></i><em >027-82671661</em></span>
             </div>
+
+        </li>
+         <li class="am-u-lg-4 am-u-md-4 am-u-sm-12 part-5-li2">
+            <div class="part-5-title"></div>
+
+            <div class="part-5-words2">
+                <span>地址:江西公司</span>
+                <span>电话:{{$base->phone}}</span>
+                <span>邮箱:{{$base->email}}</span>
+                <span><i class="am-icon-phone"></i><em >027-82671661</em></span>
+            </div>
+            
         </li>
         <li class="am-u-lg-4 am-u-md-4 am-u-sm-12 ">
             <div class="part-5-title">相关链接</div>
@@ -237,6 +248,38 @@
    
 </footer>
 
+    <div class="side">
+        <ul>
+            <li style="position:relative;">
+                <div class="sidebox side1"></div>
+                <div class="kf_leyu">
+                    <div class="kf_close_1"></div>
+                    <div class="kf_leyu_ico">
+                        <ul>
+                            @foreach($companys as $company)
+                            <li><a href="tencent://message/?uin={{$company->qq}}&Site=uemo&Menu=yes" target="_blank">{{$company->name}}</a></li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+            </li>
+          <!--   <li style="position:relative;">
+                <div class="sidebox side2"></div>
+                <div class="kf_tel" style="background-image: url({{$base->url.'uploads/'.$base->qrcode}});">
+                    <div class="kf_close_2"></div>
+                </div>
+            </li> -->
+            <li style="position:relative;">
+                <div class="sidebox side3"></div>
+                <div class="kf_ewm" style="background-image: url({{$base->url.'uploads/'.$base->qrcode}});">
+                    <div class="kf_close_3"></div>
+                </div>
+            </li>
+            <li>
+                <div onClick="goTop()" class="sidebox side5" id="back-to-top"></div>
+            </li>
+        </ul>
+    </div>
 
 <style>
 .copyrights{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
@@ -250,10 +293,12 @@
 <![endif]-->
 
 <!--[if (gte IE 9)|!(IE)]><!-->
-<script src="js/jquery.min.js"></script>
+<script src="{{$base->url}}js/jquery.min.js"></script>
 <!--<![endif]-->
-<script src="js/amazeui.min.js"></script>
-<script src="js/scroll.js"></script>
+<script src="{{$base->url}}js/amazeui.min.js"></script>
+<script src="{{$base->url}}js/scroll.js"></script>
+    <script type="text/javascript" src="{{$base->url}}javascript/kefu.js"></script>
+
 <script type="text/javascript">
 
 </script>
