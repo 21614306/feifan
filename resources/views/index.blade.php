@@ -62,30 +62,30 @@
         <div class="part-title">
             <a href="{{$base->url}}solutions">
             <i class="am-icon-lightbulb-o part-title-i"></i>
-            <span class="part-title-span">验厂服务</span>
+            <span class="part-title-span">服务承诺</span>
             <p>Solutions</p>
             </a>
         </div>
         <ul class="am-g part-content solutions-content">
           <li class="am-u-sm-6 am-u-md-3 am-u-lg-3">
             <i class="am-icon-safari solution-circle"></i>
-            <span class="solutions-title">客户验厂</span>
-            <p class="solutions-way">微信公众号开发移动网站微信公众号开发</p>
+            <span class="solutions-title">100%一次性通过</span>
+            <p class="solutions-way"></p>
           </li>
           <li class="am-u-sm-6 am-u-md-3 am-u-lg-3">
             <i class="am-icon-magic solution-circle"></i>
-            <span class="solutions-title">体系验厂</span>
-            <p class="solutions-way">移动网站微信公众号开发移动网站微信公众号开发,解决方案</p>
+            <span class="solutions-title">专业辅导，专家审核</span>
+            <p class="solutions-way"></p>
           </li>
           <li class="am-u-sm-6 am-u-md-3 am-u-lg-3">
             <i class="am-icon-phone solution-circle"></i>
-            <span class="solutions-title">GRS认证</span>
-            <p class="solutions-way">移动网站微信公众号开发移动网站微信公众号开发</p>
+            <span class="solutions-title">360个工作日包通过</span>
+            <p class="solutions-way"></p>
           </li>
           <li class="am-u-sm-6 am-u-md-3 am-u-lg-3">
             <i class="am-icon-hacker-news solution-circle"></i>
-            <span class="solutions-title">网站、移动网站</span>
-            <p class="solutions-way">网站、移动网站微信公众号开发移动网站微信公众号开发,解决方案</p>
+            <span class="solutions-title">不通过退全款</span>
+            <p class="solutions-way"></p>
           </li>
           
         </ul>
