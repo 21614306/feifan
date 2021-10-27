@@ -34,7 +34,7 @@
       <li><a href="{{$base->url}}solutions">验厂服务</a></li>
       <li><a href="{{$base->url}}product-show">GRS认证 </a></li>
       <li><a href="{{$base->url}}customer-case">客户案例</a></li>
-      <li class="{{$base->url}}hw-menu-active"><a href="news">新闻动态 </a></li>
+      <li class="hw-menu-active"><a href="{{$base->url}}news">新闻动态 </a></li>
       <li><a href="{{$base->url}}about-us">关于我们</a></li>
     </ul>
     </div>
