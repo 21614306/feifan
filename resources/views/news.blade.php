@@ -166,7 +166,39 @@
    
 </footer>
 
-
+    <div class="side">
+        <ul>
+            <li style="position:relative;">
+                <div class="sidebox side1"></div>
+                <div class="kf_leyu">
+                    <div class="kf_close_1"></div>
+                    <div class="kf_leyu_ico">
+                        <ul>
+                            @foreach($companys as $company)
+                            <li><a href="tencent://message/?uin={{$company->qq}}&Site=uemo&Menu=yes" target="_blank">{{$company->name}}</a></li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+            </li>
+          <!--   <li style="position:relative;">
+                <div class="sidebox side2"></div>
+                <div class="kf_tel" style="background-image: url({{$base->url.'uploads/'.$base->qrcode}});">
+                    <div class="kf_close_2"></div>
+                </div>
+            </li> -->
+            <li style="position:relative;">
+                <div class="sidebox side3"></div>
+                <div class="kf_ewm" style="background-image: url({{$base->url.'uploads/'.$base->qrcode}});">
+                    <div class="kf_close_3"></div>
+                </div>
+            </li>
+            <li>
+                <div onClick="goTop()" class="sidebox side5" id="back-to-top"></div>
+            </li>
+        </ul>
+    </div>
+    
 </body>
 <!--[if lt IE 9]>
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
