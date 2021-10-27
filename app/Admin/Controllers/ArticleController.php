@@ -80,9 +80,8 @@ class ArticleController extends AdminController
             $form->text('title')->required();
             $form->radio('type')->options([
                 'case_news'=>'案例动态',
-                'company_news'=>'公司动态',
                 'industry_news'=>'行业动态',
-                'grs_news'=>'grs动态'
+                'grs_news'=>'GRS动态'
             ])->required();
             $form->text('desc')->required();
             $form->markdown('content')->imageDirectory('upload/image');
