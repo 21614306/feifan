@@ -170,6 +170,29 @@
          <div class="clear"></div>
     </div>
 </div>
+
+<div class=" am-container-1">
+    <div class="contact-us">
+         <div class="am-u-lg-6 am-u-md-6 am-u-sm-12">
+            <img src="{{$base->url}}img/map.png" />
+         </div>
+         <div class="am-u-lg-6 am-u-md-6 am-u-sm-12">
+             <ul class="contact-add">
+                <li>
+                    <div><i class=" am-icon-map-marker"></i><span class="contact-add-1">南昌西湖区兰宫路269号</span></div>
+                </li>
+              
+                <li>
+                    <div><i class=" am-icon-mobile mobile"></i><span>18970960038</span></div>               
+                </li>
+                <li>
+                    <div><i class=" am-icon-envelope-o"></i><span>36183180@qq.com</span></div>                    
+                </li>
+             </ul>      
+         </div>
+         <div class="clear"></div>
+    </div>
+</div>
 </div>
 <footer class="footer ">
     
