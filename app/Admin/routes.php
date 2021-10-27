@@ -24,7 +24,7 @@ Route::group([
     $router->resource('/authentication','AuthenticationController');
 
 
-    $router->resource('/company','companyController');
+    $router->resource('/company','CompanyController');
 
 
 });
