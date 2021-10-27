@@ -97,20 +97,27 @@
    
 		
 </div>
-
 <footer class="footer ">
     
 <ul>
         
         <li class="am-u-lg-4 am-u-md-4 am-u-sm-12 part-5-li2">
-            <div class="part-5-title">联系我们</div>
+            <div class="part-5-title">厦门公司</div>
             <div class="part-5-words2">
-                <span>地址:XXX</span>
-                <span>电话:18238765101</span>
-                <span>传真:(123) 456-7890</span>
-                <span>邮箱:support@vectorlab.com</span>
-                <span><i class="am-icon-phone"></i><em >027-82671661</em></span>
+                <span>厦门地址:厦门集美创意城11#1407室</span>
+                <span>邮箱:alan_jwp@163.com</span>
+                <span><i class="am-icon-phone"></i><em >18950080452</em></span>
             </div>
+
+        </li>
+         <li class="am-u-lg-4 am-u-md-4 am-u-sm-12 part-5-li2">
+            <div class="part-5-title">南昌公司</div>
+            <div class="part-5-words2">
+                <span>南昌地址:南昌西湖区兰宫路269号</span>
+                <span>邮箱:36183180@qq.com</span>
+                <span><i class="am-icon-phone"></i><em >18970960038</em></span>
+            </div>
+            
         </li>
         <li class="am-u-lg-4 am-u-md-4 am-u-sm-12 ">
             <div class="part-5-title">相关链接</div>
@@ -141,5 +148,7 @@
 <script src="{{$base->url}}js/jquery.min.js"></script>
 <!--<![endif]-->
 <script src="{{$base->url}}js/amazeui.min.js"></script>
+    <script type="text/javascript" src="{{$base->url}}javascript/kefu.js"></script>
+
 
 </html>

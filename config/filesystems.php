@@ -57,8 +57,8 @@ return [
         'driver' => 'local',
         'root' => public_path('uploads'),
         'visibility' => 'public',
-        // 'url' => env('APP_URL').'/uploads',
-        'url' => 'http://feifan.net'.'/uploads',
+        'url' => env('APP_URL').'/uploads',
+        // 'url' => 'http://feifan.net'.'/uploads',
         ]
 
     ],

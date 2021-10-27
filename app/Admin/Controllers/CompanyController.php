@@ -22,18 +22,9 @@ class CompanyController extends AdminController
             $grid->column('name');
             $grid->column('tel');
             $grid->column('add');
-            $grid->column('article_id');
-            $grid->column('website');
             $grid->column('qq');
-            $grid->column('qrcode');
-            $grid->column('field1');
-            $grid->column('field2');
-            $grid->column('field3');
-            $grid->column('created_at');
-            $grid->column('updated_at')->sortable();
-        
             $grid->filter(function (Grid\Filter $filter) {
-                $filter->equal('id');
+            $filter->equal('id');
         
             });
         });
@@ -53,15 +44,7 @@ class CompanyController extends AdminController
             $show->field('name');
             $show->field('tel');
             $show->field('add');
-            $show->field('article_id');
-            $show->field('website');
             $show->field('qq');
-            $show->field('qrcode');
-            $show->field('field1');
-            $show->field('field2');
-            $show->field('field3');
-            $show->field('created_at');
-            $show->field('updated_at');
         });
     }
 
@@ -77,15 +60,7 @@ class CompanyController extends AdminController
             $form->text('name');
             $form->text('tel');
             $form->text('add');
-            $form->text('article_id');
-            $form->text('website');
             $form->text('qq');
-            $form->text('qrcode');
-            $form->text('field1');
-            $form->text('field2');
-            $form->text('field3');
-            $form->display('created_at');
-            $form->display('updated_at');
         });
     }
 }

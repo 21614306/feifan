@@ -220,6 +220,8 @@
 <![endif]-->
 <script src="{{$base->url}}js/jquery.min.js"></script>
 <script src="{{$base->url}}js/amazeui.min.js"></script>
+    <script type="text/javascript" src="{{$base->url}}javascript/kefu.js"></script>
+
 <!--[if (gte IE 9)|!(IE)]><!-->
 
 </html>
