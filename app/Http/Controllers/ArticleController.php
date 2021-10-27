@@ -36,8 +36,8 @@ class ArticleController extends Controller
 
     public function solutions()
     {
-        $sysAuths = Authentication::all()->where('type','体系验厂');
-        $cusAuths = Authentication::all()->where('type','客户验厂');
+        $sysAuths = Authentication::all()->where('type','1');
+        $cusAuths = Authentication::all()->where('type','0');
         $base = Basis::find(1);
         $companys = Company::all();
         return view('solutions',[

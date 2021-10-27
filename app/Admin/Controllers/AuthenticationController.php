@@ -17,8 +17,8 @@ class AuthenticationController extends AdminController
      */
     protected function grid()
     {
+
         return Grid::make(new Authentication(), function (Grid $grid) {
-            // dd($grid);
             $grid->column('id')->sortable();
             $grid->column('name');
             $grid->column('type');
@@ -65,7 +65,6 @@ class AuthenticationController extends AdminController
     protected function form()
     {
         return Form::make(new Authentication(), function (Form $form) {
-
 
             $form->display('id');
             $form->text('name')->required();
