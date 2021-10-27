@@ -67,7 +67,7 @@
 <div class="solution-inform">
 	<div class=" solution-inform-content-all">
 		<div class="solution-inform-content">
-		    <p class="inform-content-p">{{$auth->name}}</p>
+		    <p class="inform-content-p">{{$auth->introduction}}</p>
 	      <div class="solution-inform-content-img">
 	      	<img src="{{$base->url}}img/inform.png"/>
 	      	<div class="clear"></div>

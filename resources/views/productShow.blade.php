@@ -78,7 +78,7 @@
 			    		</div>
 			    		<div class="product-intro">
 			    			<span>详情介绍:</span>
-			    			<div><p>{{$article->desc}}</p></div>
+			    			<div><p>{{$article->content}}</p></div>
 			    		  <i class="am-icon-tasks"></i>
 			    		</div>
 			    	</div>
